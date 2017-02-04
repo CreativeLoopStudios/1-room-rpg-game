@@ -3,7 +3,7 @@
   <spriteName>sPlayer</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// init variables
 spd = 200 / room_speed;
+deccel = 100 / room_speed;
 
 image_speed = 0;
 
