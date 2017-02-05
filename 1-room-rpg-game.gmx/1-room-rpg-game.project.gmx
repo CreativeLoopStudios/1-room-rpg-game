@@ -5,9 +5,34 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprites name="Room">
+      <sprite>sprites\sWindow</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\sPlayer</sprite>
+    </sprites>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bgHouse</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Player">
+      <script>scripts\PlayerMoveState.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <objects name="Room">
+      <object>objects\Window</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\Player</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rOneRoom</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
