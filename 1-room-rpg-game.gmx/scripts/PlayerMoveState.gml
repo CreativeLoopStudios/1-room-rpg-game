@@ -1,50 +1,26 @@
-var keyboardUp = keyboard_check(vk_up);
-var keyboardDown = keyboard_check(vk_down);
-var keyboardRight = keyboard_check(vk_right);
-var keyboardLeft = keyboard_check(vk_left);
+/// PlayerMoveState()
 
-if(keyboardUp)
+if (right or left)
 {
-    vspeed = -spd;
+    hspd += (right - left) * acc;
+    
+    if (hspd > spd) hspd = spd;
+    if (hspd < -spd) hspd = -spd;
 }
 
-if(keyboardDown)
+if(up or down)
 {
-    vspeed = spd;
+    vspd += (down - up) * acc;
+    
+    if (vspd > spd) vspd = spd;
+    if (vspd < -spd) vspd = -spd;
 }
 
-if(keyboardRight)
+if(!up and !down and !right and !left)
 {
-    hspeed = spd
+    ApplyFriction(0.3);
 }
 
-if(keyboardLeft)
-{
-    hspeed = -spd;
-}
-
-if(!keyboardUp and !keyboardDown and !keyboardRight and !keyboardLeft)
-{
-    if(vspeed != 0)
-    {
-        if(vspeed > 0)
-        {
-            vspeed -= deccel;
-        }
-        else
-        {
-            vspeed += deccel;
-        }
-    }
-    if(hspeed != 0)
-    {
-        if(hspeed > 0)
-        {
-            hspeed -= deccel;
-        }
-        else
-        {
-            hspeed += deccel;
-        }
-    }
-}
+// Move if needed
+x += hspd;
+y += vspd;

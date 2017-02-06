@@ -21,6 +21,11 @@
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
     </scripts>
+    <scripts name="Util">
+      <script>scripts\GetMovementInput.gml</script>
+      <script>scripts\ApplyFriction.gml</script>
+      <script>scripts\InitialiseRoom.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Room">
@@ -29,6 +34,7 @@
     <objects name="Player">
       <object>objects\Player</object>
     </objects>
+    <object>objects\Game</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
