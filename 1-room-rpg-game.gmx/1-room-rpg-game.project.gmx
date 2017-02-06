@@ -10,7 +10,11 @@
       <sprite>sprites\sWindow</sprite>
     </sprites>
     <sprites name="Player">
-      <sprite>sprites\sPlayer</sprite>
+      <sprite>sprites\sPlayerFront</sprite>
+      <sprite>sprites\sPlayerBack</sprite>
+      <sprite>sprites\sPlayerRight</sprite>
+      <sprite>sprites\sPlayerLeft</sprite>
+      <sprite>sprites\sPlayerMask</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
