@@ -26,21 +26,25 @@ if((!up and !down) or (!right and !left))
 if(hspd > 0)
 {
     sprite_index = sPlayerRight;
+    direction = 0;
     image_speed = animSpd;
 }
 else if(hspd < 0)
 {
     sprite_index = sPlayerLeft;
+    direction = 180;
     image_speed = animSpd;
 }
 else if(vspd > 0)
 {
     sprite_index = sPlayerFront;
+    direction = 270;
     image_speed = animSpd;
 }
 else if(vspd < 0)
 {
     sprite_index = sPlayerBack;
+    direction = 90;
     image_speed = animSpd;
 }
 else
@@ -51,3 +55,10 @@ else
 
 // Move if needed
 Move(hspd, vspd, Solid);
+
+// attack state
+var space = keyboard_check_pressed(vk_space);
+if(space)
+{
+    state = PlayerAttackState;
+}

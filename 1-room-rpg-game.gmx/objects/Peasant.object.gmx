@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-10</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>Solid</parentName>
   <maskName>sEnemyMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,7 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>/// init variables
-spd = 50 / room_speed;
+spd = 80 / room_speed;
+
+hspd = 0;
+vspd = 0;
+
+health = 10;
 
 state = PeasantChasingPlayerState;
 </string>
