@@ -52,6 +52,9 @@
     </objects>
     <object>objects\Game</object>
     <object>objects\Solid</object>
+    <objects name="Wave">
+      <object>objects\Wave</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
