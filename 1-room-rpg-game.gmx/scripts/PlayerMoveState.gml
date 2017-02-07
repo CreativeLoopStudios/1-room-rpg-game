@@ -49,4 +49,3 @@ else
 
 // Move if needed
 Move(hspd, vspd, Solid);
-

@@ -17,6 +17,10 @@
       <sprite>sprites\sPlayerMask</sprite>
     </sprites>
     <sprite>sprites\sSolid</sprite>
+    <sprites name="Enemies">
+      <sprite>sprites\sPeasant</sprite>
+      <sprite>sprites\sEnemyMask</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgHouse</background>
@@ -25,6 +29,9 @@
   <scripts name="scripts">
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
+    </scripts>
+    <scripts name="Enemies">
+      <script>scripts\PeasantChasingPlayerState.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetMovementInput.gml</script>
@@ -39,6 +46,9 @@
     </objects>
     <objects name="Player">
       <object>objects\Player</object>
+    </objects>
+    <objects name="Enemies">
+      <object>objects\Peasant</object>
     </objects>
     <object>objects\Game</object>
     <object>objects\Solid</object>
