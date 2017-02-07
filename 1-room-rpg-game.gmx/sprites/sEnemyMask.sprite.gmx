@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>49</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>42</bbox_bottom>
+  <bbox_left>49</bbox_left>
+  <bbox_right>0</bbox_right>
+  <bbox_top>85</bbox_top>
+  <bbox_bottom>0</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>50</width>
-  <height>43</height>
+  <height>86</height>
   <frames>
     <frame index="0">images\sEnemyMask_0.png</frame>
   </frames>
