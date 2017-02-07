@@ -48,5 +48,5 @@ else
 }
 
 // Move if needed
-x += hspd;
-y += vspd;
+Move(hspd, vspd, Solid);
+

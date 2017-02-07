@@ -16,6 +16,7 @@
       <sprite>sprites\sPlayerLeft</sprite>
       <sprite>sprites\sPlayerMask</sprite>
     </sprites>
+    <sprite>sprites\sSolid</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgHouse</background>
@@ -29,6 +30,7 @@
       <script>scripts\GetMovementInput.gml</script>
       <script>scripts\ApplyFriction.gml</script>
       <script>scripts\InitialiseRoom.gml</script>
+      <script>scripts\Move.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -39,6 +41,7 @@
       <object>objects\Player</object>
     </objects>
     <object>objects\Game</object>
+    <object>objects\Solid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
