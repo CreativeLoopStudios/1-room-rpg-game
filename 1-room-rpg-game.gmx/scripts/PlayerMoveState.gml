@@ -1,13 +1,6 @@
 /// PlayerMoveState()
 
-if (right or left)
-{
-    hspd += (right - left) * acc;
-    
-    if (hspd > spd) hspd = spd;
-    if (hspd < -spd) hspd = -spd;
-}
-
+// check if up or down key pressed
 if(up or down)
 {
     vspd += (down - up) * acc;
@@ -16,7 +9,16 @@ if(up or down)
     if (vspd < -spd) vspd = -spd;
 }
 
-if(!up and !down and !right and !left)
+if (right or left)
+{
+    hspd += (right - left) * acc;
+    
+    if (hspd > spd) hspd = spd;
+    if (hspd < -spd) hspd = -spd;
+}
+
+// apply friction when all keys are released
+if((!up and !down) or (!right and !left))
 {
     ApplyFriction(0.3);
 }

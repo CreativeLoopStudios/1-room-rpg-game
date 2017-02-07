@@ -29,11 +29,12 @@
 spd = 200 / room_speed;
 acc = 100 / room_speed;
 
+// horizontal and vertical speed
 hspd = 0;
 vspd = 0;
 
+// animation speed
 animSpd = .1;
-
 image_speed = 0;
 
 state = PlayerMoveState;
@@ -63,7 +64,6 @@ state = PlayerMoveState;
 GetMovementInput();
 
 script_execute(state);
-
 
 depth = -y;
 </string>
