@@ -27,15 +27,17 @@
             <kind>1</kind>
             <string>///Create Variables
 
-waveNumber = 1
+waveNumber = 0
+timeBeforeFirstWave = 30 * room_speed;
 timeBetweenWave = 10 * room_speed;
 timeOfWave = 60 * room_speed;
 timeBetweenMonsters = 5 * room_speed;
 
 waveOn = false;
-alarm[0] = timeBetweenWave;
+alarm[0] = timeBeforeFirstWave;
 numerOfWindows = instance_number(Window);
 
+ajustCenterOfEnemy = 32;
 //set seed
 randomize();
 </string>
@@ -60,11 +62,10 @@ randomize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///New Monster
-if(waveOn) {
-    instance_create(random_range(144,560),random_range(144,560),Peasant);
-    alarm[2] = timeBetweenMonsters;
-}
+            <string>///End of wave
+waveOn = false;
+alarm[0] = timeBetweenWave;
+
 </string>
           </argument>
         </arguments>
@@ -87,11 +88,27 @@ if(waveOn) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///End of wave
-waveOn = false;
-alarm[0] = timeBetweenWave;
-
-
+            <string>///New Monster
+if(waveOn) {
+    var windowNumber = random_range(1,numerOfWindows);
+    var windowObjec = instance_find(Window,windowNumber);
+    var xAdjust = 0;
+    var yAdjust = 0;
+    
+    if(windowObjec.image_angle == 0) {
+        yAdjust += ajustCenterOfEnemy;
+    } else if (windowObjec.image_angle == 90) {
+        xAdjust += ajustCenterOfEnemy;
+    } else if (windowObjec.image_angle == 180) {
+        yAdjust -= 1.5 * ajustCenterOfEnemy; //correction position
+    } else if (windowObjec.image_angle == 270) {
+        xAdjust -= ajustCenterOfEnemy;
+    }
+    
+    instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant);
+    
+    alarm[1] = timeBetweenMonsters;
+}
 </string>
           </argument>
         </arguments>
@@ -116,40 +133,10 @@ alarm[0] = timeBetweenWave;
             <kind>1</kind>
             <string>///New Wave
 if(!waveOn) {
-    alarm[1] = timeOfWave;
-    alarm[2] = timeBetweenMonsters;
+    alarm[1] = timeBetweenMonsters;
+    alarm[2] = timeOfWave;
     waveOn = true;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Generate wave
-
-//144 - 560
-//144 - 860
-
-
-
-
 </string>
           </argument>
         </arguments>
