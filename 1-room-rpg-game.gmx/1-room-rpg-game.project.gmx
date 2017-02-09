@@ -14,6 +14,9 @@
       <sprite>sprites\sPlayerBack</sprite>
       <sprite>sprites\sPlayerRight</sprite>
       <sprite>sprites\sPlayerLeft</sprite>
+      <sprite>sprites\sAttackLeftRightHitbox</sprite>
+      <sprite>sprites\sAttackUpHitbox</sprite>
+      <sprite>sprites\sAttackDownHitbox</sprite>
       <sprite>sprites\sPlayerMask</sprite>
     </sprites>
     <sprite>sprites\sSolid</sprite>
@@ -33,6 +36,7 @@
     </scripts>
     <scripts name="Enemies">
       <script>scripts\PeasantChasingPlayerState.gml</script>
+      <script>scripts\PeasantHitState.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetMovementInput.gml</script>
@@ -47,6 +51,9 @@
     </objects>
     <objects name="Player">
       <object>objects\Player</object>
+      <object>objects\AttackLeftRightHitbox</object>
+      <object>objects\AttackUpHitbox</object>
+      <object>objects\AttackDownHitbox</object>
     </objects>
     <objects name="Enemies">
       <object>objects\Peasant</object>
