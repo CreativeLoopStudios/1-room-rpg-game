@@ -1,0 +1,1 @@
+global.axe = 0;
