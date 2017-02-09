@@ -1,9 +1,9 @@
 /// GetMovementInput()
 // Control the player
-up = keyboard_check(vk_up);
-down = keyboard_check(vk_down);
-right = keyboard_check(vk_right);
-left = keyboard_check(vk_left);
+up = keyboard_check(vk_up) or keyboard_check(ord('W'));
+down = keyboard_check(vk_down) or keyboard_check(ord('S'));
+right = keyboard_check(vk_right) or keyboard_check(ord('D'));
+left = keyboard_check(vk_left) or keyboard_check(ord('A'));
 
 // Override the controls for a gamepad
 /*

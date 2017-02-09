@@ -16,6 +16,11 @@
       <sprite>sprites\sPlayerLeft</sprite>
       <sprite>sprites\sPlayerMask</sprite>
     </sprites>
+    <sprite>sprites\sSolid</sprite>
+    <sprites name="Enemies">
+      <sprite>sprites\sPeasant</sprite>
+      <sprite>sprites\sEnemyMask</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgHouse</background>
@@ -24,11 +29,16 @@
   <scripts name="scripts">
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
+      <script>scripts\PlayerAttackState.gml</script>
+    </scripts>
+    <scripts name="Enemies">
+      <script>scripts\PeasantChasingPlayerState.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetMovementInput.gml</script>
       <script>scripts\ApplyFriction.gml</script>
       <script>scripts\InitialiseRoom.gml</script>
+      <script>scripts\Move.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -38,7 +48,14 @@
     <objects name="Player">
       <object>objects\Player</object>
     </objects>
+    <objects name="Enemies">
+      <object>objects\Peasant</object>
+    </objects>
     <object>objects\Game</object>
+    <object>objects\Solid</object>
+    <objects name="Wave">
+      <object>objects\Wave</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>

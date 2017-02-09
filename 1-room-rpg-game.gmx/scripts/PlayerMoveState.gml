@@ -1,13 +1,6 @@
 /// PlayerMoveState()
 
-if (right or left)
-{
-    hspd += (right - left) * acc;
-    
-    if (hspd > spd) hspd = spd;
-    if (hspd < -spd) hspd = -spd;
-}
-
+// check if up or down key pressed
 if(up or down)
 {
     vspd += (down - up) * acc;
@@ -16,7 +9,16 @@ if(up or down)
     if (vspd < -spd) vspd = -spd;
 }
 
-if(!up and !down and !right and !left)
+if (right or left)
+{
+    hspd += (right - left) * acc;
+    
+    if (hspd > spd) hspd = spd;
+    if (hspd < -spd) hspd = -spd;
+}
+
+// apply friction when all keys are released
+if((!up and !down) or (!right and !left))
 {
     ApplyFriction(0.3);
 }
@@ -24,21 +26,25 @@ if(!up and !down and !right and !left)
 if(hspd > 0)
 {
     sprite_index = sPlayerRight;
+    direction = 0;
     image_speed = animSpd;
 }
 else if(hspd < 0)
 {
     sprite_index = sPlayerLeft;
+    direction = 180;
     image_speed = animSpd;
 }
 else if(vspd > 0)
 {
     sprite_index = sPlayerFront;
+    direction = 270;
     image_speed = animSpd;
 }
 else if(vspd < 0)
 {
     sprite_index = sPlayerBack;
+    direction = 90;
     image_speed = animSpd;
 }
 else
@@ -48,5 +54,11 @@ else
 }
 
 // Move if needed
-x += hspd;
-y += vspd;
+Move(hspd, vspd, Solid);
+
+// attack state
+var space = keyboard_check_pressed(vk_space);
+if(space)
+{
+    state = PlayerAttackState;
+}
