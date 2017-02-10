@@ -1,30 +1,40 @@
 /// PlayerAttackState()
 // touching an enemy
-var enemyFound = noone;
-show_debug_message(direction);
-if(direction == 180)
+
+// Attack Hitbox
+// if you need to test when the animation of the attack are actually attacking
+/*if(image_index >= 1 and image_index <= 3)
 {
-    enemyFound = instance_place(bbox_left, y, Peasant);
-}
-else if(direction == 0)
+}*/
+
+var hitbox = noone;
+
+// create hitbox
+if(direction == 0 or direction == 180)
 {
-    enemyFound = instance_place(bbox_right, y, Peasant);
+    hitbox = instance_create(x, y, AttackLeftRightHitbox);
 }
 else if(direction == 90)
 {
-    enemyFound = instance_place(x, bbox_top + 5, Peasant);
+    hitbox = instance_create(x, y, AttackUpHitbox);
 }
 else if(direction == 270)
 {
-    enemyFound = instance_place(x, bbox_bottom, Peasant);
+    hitbox = instance_create(x, y, AttackDownHitbox);
 }
 
-if(enemyFound)
+if(hitbox)
 {
-    show_debug_message("Found!!!!!!!!!!!!!");
-    state = PlayerMoveState;
+    with(hitbox)
+    {
+        if(other.direction == 180) image_xscale = -1;
+        
+        // if hit an object
+        with(instance_place(x, y, Peasant))
+        {
+            state = PeasantHitState;
+        }
+    }
 }
-else
-{
-    state = PlayerMoveState;
-}
+
+state = PlayerMoveState;
