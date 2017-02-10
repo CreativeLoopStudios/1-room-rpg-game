@@ -26,9 +26,7 @@
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\sHammer</sprite>
-    </sprites>
-    <sprites name="Inventory">
-      <sprite>sprites\spr_axe</sprite>
+      <sprite>sprites\sAxe</sprite>
       <sprite>sprites\nosprite</sprite>
     </sprites>
   </sprites>
@@ -78,14 +76,13 @@
       <object>objects\Wave</object>
     </objects>
     <objects name="Weapons">
-      <object>objects\Item</object>
       <object>objects\Weapon</object>
       <object>objects\Hammer</object>
     </objects>
-    <object>objects\obj_inventory</object>
     <objects name="Items">
-      <object>objects\obj_axe</object>
       <object>objects\Item</object>
+      <object>objects\Inventory</object>
+      <object>objects\Axe</object>
     </objects>
   </objects>
   <rooms name="rooms">
