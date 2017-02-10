@@ -27,6 +27,10 @@
     <sprites name="Weapons">
       <sprite>sprites\sHammer</sprite>
     </sprites>
+    <sprites name="Inventory">
+      <sprite>sprites\spr_axe</sprite>
+      <sprite>sprites\nosprite</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgHouse</background>
@@ -46,6 +50,10 @@
       <script>scripts\ApplyFriction.gml</script>
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
+      <script>scripts\addList.gml</script>
+      <script>scripts\addToInv.gml</script>
+      <script>scripts\manageObjects.gml</script>
+      <script>scripts\startingValues.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\HighlightItem.gml</script>
@@ -73,6 +81,13 @@
       <object>objects\Item</object>
       <object>objects\Weapon</object>
       <object>objects\Hammer</object>
+    </objects>
+    <object>objects\obj_inventory</object>
+    <objects name="Items">
+      <object>objects\obj_axe</object>
+      <object>objects\Item</object>
+      <object>objects\object9</object>
+      <object>objects\object8</object>
     </objects>
   </objects>
   <rooms name="rooms">
