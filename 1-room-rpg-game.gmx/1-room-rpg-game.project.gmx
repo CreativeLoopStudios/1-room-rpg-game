@@ -24,7 +24,7 @@
       <sprite>sprites\sPeasant</sprite>
       <sprite>sprites\sEnemyMask</sprite>
     </sprites>
-    <sprites name="Weapons">
+    <sprites name="Items">
       <sprite>sprites\sHammer</sprite>
       <sprite>sprites\sAxe</sprite>
       <sprite>sprites\nosprite</sprite>
