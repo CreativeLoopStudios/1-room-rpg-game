@@ -24,7 +24,7 @@
       <sprite>sprites\sPeasant</sprite>
       <sprite>sprites\sEnemyMask</sprite>
     </sprites>
-    <sprites name="Inventory">
+    <sprites name="Items">
       <sprite>sprites\spr_axe</sprite>
       <sprite>sprites\nosprite</sprite>
     </sprites>
@@ -75,8 +75,6 @@
     <objects name="Items">
       <object>objects\obj_axe</object>
       <object>objects\Item</object>
-      <object>objects\object9</object>
-      <object>objects\object8</object>
     </objects>
   </objects>
   <rooms name="rooms">
