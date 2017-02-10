@@ -30,10 +30,8 @@ if(hitbox)
         if(other.direction == 180) image_xscale = -1;
         
         // if hit an object
-        with(instance_place(x, y, Peasant))
-        {
-            state = PeasantHitState;
-        }
+        var peasantHit = instance_place(x, y, Peasant);
+        peasantHit.state = PeasantHitState;
     }
 }
 

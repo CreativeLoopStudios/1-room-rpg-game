@@ -24,6 +24,9 @@
       <sprite>sprites\sPeasant</sprite>
       <sprite>sprites\sEnemyMask</sprite>
     </sprites>
+    <sprites name="Weapons">
+      <sprite>sprites\sHammer</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgHouse</background>
@@ -44,6 +47,9 @@
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
     </scripts>
+    <scripts name="Item">
+      <script>scripts\HighlightItem.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Room">
@@ -62,6 +68,11 @@
     <object>objects\Solid</object>
     <objects name="Wave">
       <object>objects\Wave</object>
+    </objects>
+    <objects name="Weapons">
+      <object>objects\Item</object>
+      <object>objects\Weapon</object>
+      <object>objects\Hammer</object>
     </objects>
   </objects>
   <rooms name="rooms">

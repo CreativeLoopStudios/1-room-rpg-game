@@ -57,8 +57,10 @@ else
 Move(hspd, vspd, Solid);
 
 // attack state
-var space = keyboard_check_pressed(vk_space);
-if(space)
+if(space and rightHandWeapon)
 {
     state = PlayerAttackState;
 }
+
+// highlight item on ground
+HighlightItem();
