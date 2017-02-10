@@ -54,7 +54,7 @@
       <script>scripts\startingValues.gml</script>
     </scripts>
     <scripts name="Item">
-      <script>scripts\HighlightItem.gml</script>
+      <script>scripts\PickItemIfInRange.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -75,11 +75,11 @@
     <objects name="Wave">
       <object>objects\Wave</object>
     </objects>
-    <objects name="Weapons">
-      <object>objects\Weapon</object>
-      <object>objects\Hammer</object>
-    </objects>
     <objects name="Items">
+      <objects name="Weapons">
+        <object>objects\Weapon</object>
+        <object>objects\Hammer</object>
+      </objects>
       <object>objects\Item</object>
       <object>objects\Inventory</object>
       <object>objects\Axe</object>

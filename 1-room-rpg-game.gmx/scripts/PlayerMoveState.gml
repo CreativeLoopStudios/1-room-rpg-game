@@ -62,5 +62,8 @@ if(space and rightHandWeapon)
     state = PlayerAttackState;
 }
 
-// highlight item on ground
-HighlightItem();
+// get item on ground
+if(e_key)
+{
+    PickItemIfInRange();
+}
