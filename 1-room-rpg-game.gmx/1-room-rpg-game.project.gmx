@@ -23,9 +23,7 @@
     <sprites name="Enemies">
       <sprite>sprites\sPeasant</sprite>
       <sprite>sprites\sEnemyMask</sprite>
-    </sprites>
-    <sprites name="Items">
-      <sprite>sprites\spr_axe</sprite>
+    </sprites>	<sprites name="Items">	  <sprite>sprites\sHammer</sprite>      <sprite>sprites\spr_axe</sprite>
       <sprite>sprites\nosprite</sprite>
     </sprites>
   </sprites>
@@ -52,6 +50,9 @@
       <script>scripts\manageObjects.gml</script>
       <script>scripts\startingValues.gml</script>
     </scripts>
+    <scripts name="Item">
+      <script>scripts\HighlightItem.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Room">
@@ -70,6 +71,11 @@
     <object>objects\Solid</object>
     <objects name="Wave">
       <object>objects\Wave</object>
+    </objects>
+    <objects name="Weapons">
+      <object>objects\Item</object>
+      <object>objects\Weapon</object>
+      <object>objects\Hammer</object>
     </objects>
     <object>objects\obj_inventory</object>
     <objects name="Items">

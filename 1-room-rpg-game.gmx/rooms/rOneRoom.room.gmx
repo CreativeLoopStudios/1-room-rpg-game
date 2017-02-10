@@ -64,6 +64,7 @@
     <instance objName="Solid" x="112" y="368" name="inst_9E6FBDFE" locked="0" code="" scaleX="1" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="Solid" x="480" y="592" name="inst_6B787C48" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Peasant" x="176" y="272" name="inst_F51EC5E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Hammer" x="720" y="416" name="inst_DABD13E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_axe" x="768" y="224" name="inst_E4D21C48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inventory" x="16" y="16" name="inst_F1F146B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_axe" x="336" y="208" name="inst_AE65D783" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
