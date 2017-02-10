@@ -23,7 +23,10 @@
     <sprites name="Enemies">
       <sprite>sprites\sPeasant</sprite>
       <sprite>sprites\sEnemyMask</sprite>
-    </sprites>	<sprites name="Items">	  <sprite>sprites\sHammer</sprite>      <sprite>sprites\spr_axe</sprite>
+    </sprites>
+    <sprites name="Items">
+      <sprite>sprites\sHammer</sprite>
+      <sprite>sprites\spr_axe</sprite>
       <sprite>sprites\nosprite</sprite>
     </sprites>
   </sprites>
