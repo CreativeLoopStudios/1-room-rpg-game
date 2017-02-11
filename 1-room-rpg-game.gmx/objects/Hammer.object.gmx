@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// set variables
 damage = 2;
+event_inherited();
 </string>
           </argument>
         </arguments>
