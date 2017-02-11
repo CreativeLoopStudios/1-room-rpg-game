@@ -39,7 +39,7 @@ for(i = 0; i &lt; totalSlots; i++){
 for(i = 0; i &lt; totalSlots; i++){
     coordY[i] = 0;
 }
-startingValues();
+StartingValues();
 
 spr = nosprite;
 slotTaken = -1;
@@ -93,7 +93,7 @@ for(i = 0; i &lt; totalSlots; i++){
     //}
     yy+=48
 }
-manageObjects(cellWidth, cellHeight)
+ManageObjects(cellWidth, cellHeight)
 
 </string>
           </argument>
