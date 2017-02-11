@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// set variables
 damage = 2;
-name = "axe";
+name = "Axe";
 event_inherited();
 </string>
           </argument>

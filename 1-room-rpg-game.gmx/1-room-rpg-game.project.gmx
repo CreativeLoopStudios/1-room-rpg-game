@@ -48,13 +48,13 @@
       <script>scripts\ApplyFriction.gml</script>
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
-      <script>scripts\AddList.gml</script>
-      <script>scripts\addToInv.gml</script>
-      <script>scripts\ManageObjects.gml</script>
-      <script>scripts\StartingValues.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
+      <script>scripts\AddList.gml</script>
+      <script>scripts\AddToInv.gml</script>
+      <script>scripts\ManageObjects.gml</script>
+      <script>scripts\StartingValues.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
