@@ -85,6 +85,9 @@
       <object>objects\Axe</object>
     </objects>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\rOneRoom</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

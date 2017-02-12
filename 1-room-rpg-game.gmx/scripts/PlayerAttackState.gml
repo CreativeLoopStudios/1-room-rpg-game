@@ -31,6 +31,7 @@ if(hitbox)
         
         // if hit an object
         var peasantHit = instance_place(x, y, Peasant);
+        peasantHit.health -= other.rightHandWeapon.damage;
         peasantHit.state = PeasantHitState;
     }
 }
