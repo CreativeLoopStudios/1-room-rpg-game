@@ -48,15 +48,18 @@
       <script>scripts\ApplyFriction.gml</script>
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
-      <script>scripts\addList.gml</script>
-      <script>scripts\addToInv.gml</script>
-      <script>scripts\manageObjects.gml</script>
-      <script>scripts\startingValues.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
+      <script>scripts\AddList.gml</script>
+      <script>scripts\AddToInv.gml</script>
+      <script>scripts\ManageObjects.gml</script>
+      <script>scripts\StartingValues.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shHighlight.shader</shader>
+  </shaders>
   <objects name="objects">
     <objects name="Room">
       <object>objects\Window</object>
@@ -70,8 +73,6 @@
     <objects name="Enemies">
       <object>objects\Peasant</object>
     </objects>
-    <object>objects\Game</object>
-    <object>objects\Solid</object>
     <objects name="Wave">
       <object>objects\Wave</object>
     </objects>
@@ -79,10 +80,15 @@
       <objects name="Weapons">
         <object>objects\Weapon</object>
         <object>objects\Hammer</object>
+        <object>objects\Axe</object>
       </objects>
       <object>objects\Item</object>
       <object>objects\Inventory</object>
-      <object>objects\Axe</object>
+    </objects>
+    <objects name="Util">
+      <object>objects\Game</object>
+      <object>objects\Solid</object>
+      <object>objects\Highlight</object>
     </objects>
   </objects>
   <rooms name="rooms">

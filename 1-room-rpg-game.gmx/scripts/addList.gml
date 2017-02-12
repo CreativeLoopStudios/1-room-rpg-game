@@ -1,5 +1,5 @@
-toName = argument0;
+var obj = argument0;
 
-if(toName == "axe"){
-    global.axe++
-}
+//if(toName == "axe"){
+//    global.axe++
+//}
