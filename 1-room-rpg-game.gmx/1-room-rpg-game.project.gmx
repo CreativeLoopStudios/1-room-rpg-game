@@ -10,6 +10,9 @@
       <sprite>sprites\sPeasant</sprite>
       <sprite>sprites\sEnemyMask</sprite>
     </sprites>
+    <sprites name="GUI">
+      <sprite>sprites\sCraftingGUI</sprite>
+    </sprites>
     <sprites name="Items">
       <sprite>sprites\sHammer</sprite>
       <sprite>sprites\sAxe</sprite>
@@ -67,6 +70,9 @@
   <objects name="objects">
     <objects name="Enemies">
       <object>objects\Peasant</object>
+    </objects>
+    <objects name="GUI">
+      <object>objects\CraftingGUI</object>
     </objects>
     <objects name="Items">
       <objects name="Weapons">
