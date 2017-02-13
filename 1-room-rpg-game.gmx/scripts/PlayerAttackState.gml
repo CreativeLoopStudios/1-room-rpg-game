@@ -34,7 +34,7 @@ if(hitbox)
         var peasantHit = instance_place(x, y, Peasant);
         with(peasantHit)
         {
-            health -= weaponDamage;
+            life -= weaponDamage;
             state = PeasantHitState;
         }
     }
