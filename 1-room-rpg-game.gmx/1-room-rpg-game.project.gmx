@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprites name="Room">
       <sprite>sprites\sWindow</sprite>
+      <sprite>sprites\sMonsterTable</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\sPlayerFront</sprite>
@@ -63,6 +64,7 @@
   <objects name="objects">
     <objects name="Room">
       <object>objects\Window</object>
+      <object>objects\MonsterTable</object>
     </objects>
     <objects name="Player">
       <object>objects\Player</object>

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1024</width>
   <height>720</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -64,12 +64,8 @@
     <instance objName="Solid" x="112" y="368" name="inst_9E6FBDFE" locked="0" code="" scaleX="1" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="Solid" x="480" y="592" name="inst_6B787C48" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Peasant" x="176" y="272" name="inst_F51EC5E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Hammer" x="720" y="416" name="inst_DABD13E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Axe" x="768" y="224" name="inst_E4D21C48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Axe" x="336" y="208" name="inst_AE65D783" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Axe" x="288" y="448" name="inst_851DBC6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Axe" x="512" y="224" name="inst_B5655187" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Axe" x="464" y="464" name="inst_9A62601C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Hammer" x="464" y="416" name="inst_DABD13E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="MonsterTable" x="648" y="360" name="inst_FDAAAD44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
