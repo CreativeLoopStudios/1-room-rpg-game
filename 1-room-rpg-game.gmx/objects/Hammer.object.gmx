@@ -26,9 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// set variables
-name = "Hammer"
-damage = 2;
 event_inherited();
+
+name = "Hammer";
+damage = 2;
 </string>
           </argument>
         </arguments>

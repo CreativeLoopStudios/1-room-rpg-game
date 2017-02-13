@@ -28,8 +28,15 @@ if(itemInRange)
         
         with(itemInRange)
         {
-            AddToInv(itemInRange.object_index);
-            instance_destroy();
+            visible = false;
+        }
+    }
+    else
+    {
+        with(itemInRange)
+        {
+            AddToInv(object_index);
+            visible = false;
         }
     }
 }

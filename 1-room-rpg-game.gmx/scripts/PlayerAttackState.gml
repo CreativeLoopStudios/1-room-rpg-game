@@ -25,14 +25,18 @@ else if(direction == 270)
 
 if(hitbox)
 {
+    var weaponDamage = rightHandWeapon.damage;
     with(hitbox)
     {
         if(other.direction == 180) image_xscale = -1;
         
         // if hit an object
         var peasantHit = instance_place(x, y, Peasant);
-        peasantHit.health -= other.rightHandWeapon.damage;
-        peasantHit.state = PeasantHitState;
+        with(peasantHit)
+        {
+            health -= weaponDamage;
+            state = PeasantHitState;
+        }
     }
 }
 
