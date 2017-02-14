@@ -43,6 +43,9 @@ direction = 270;
 leftHandItem = noone;
 rightHandWeapon = noone;
 
+attackTimer = 0;
+timeOfAttack = 0.2 * room_speed;
+
 state = PlayerMoveState;
 </string>
           </argument>

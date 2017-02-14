@@ -57,7 +57,7 @@ else
 Move(hspd, vspd, Solid);
 
 // attack state
-if(space and rightHandWeapon)
+if(space and rightHandWeapon and attackTimer == 0)
 {
     state = PlayerAttackState;
 }

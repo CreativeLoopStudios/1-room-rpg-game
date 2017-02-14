@@ -34,10 +34,20 @@ if(hitbox)
         var peasantHit = instance_place(x, y, Peasant);
         with(peasantHit)
         {
-            life -= weaponDamage;
-            state = PeasantHitState;
+            if(state == PeasantChasingPlayerState)
+            {
+                life -= weaponDamage;
+                hit = true;
+                state = PeasantHitState;
+            }
         }
     }
 }
 
-state = PlayerMoveState;
+attackTimer++;
+
+if(attackTimer == timeOfAttack)
+{
+    attackTimer = 0;
+    state = PlayerMoveState;
+}
