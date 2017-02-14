@@ -12,6 +12,7 @@
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\sCraftingGUI</sprite>
+      <sprite>sprites\sHandGUI</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\sHammer</sprite>
@@ -73,7 +74,7 @@
       <object>objects\Enemy</object>
     </objects>
     <objects name="GUI">
-      <object>objects\CraftingGUI</object>
+      <object>objects\GUI</object>
     </objects>
     <objects name="Items">
       <objects name="Weapons">
