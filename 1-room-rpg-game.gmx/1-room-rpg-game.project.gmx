@@ -49,7 +49,6 @@
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
-      <script>scripts\AddList.gml</script>
       <script>scripts\AddToInv.gml</script>
       <script>scripts\ManageObjects.gml</script>
       <script>scripts\StartingValues.gml</script>
