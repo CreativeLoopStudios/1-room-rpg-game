@@ -51,7 +51,30 @@ highlight_shader = shader_get_uniform(shHighlight, "f_newColour");
             <kind>1</kind>
             <string>///Check player colision
 
-if(place_meeting(x,y,Player))
+var inRange = noone;
+var middleWidthPlayer = sprite_get_width(sPlayerFront) / 2;
+var middleHeightPlayer = sprite_get_height(sPlayerFront) / 2;
+
+with(Player) {
+    if(direction == 0)
+    {   
+        inRange = collision_rectangle(x + middleWidthPlayer, y, x + middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
+    }
+    else if(direction == 180)
+    {
+        inRange = collision_rectangle(x - middleWidthPlayer, y, x - middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
+    }
+    else if(direction == 90)
+    {
+        inRange = collision_rectangle(x - middleWidthPlayer, y, x + middleWidthPlayer, y, Item, false, true);
+    }
+    else if(direction == 270)
+    {
+        inRange = collision_rectangle(x - middleWidthPlayer, y + middleHeightPlayer, x + middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
+    }
+}
+
+if(inRange != noone &amp;&amp; inRange.id == self.id)
 { 
     highlight = true;
 } 

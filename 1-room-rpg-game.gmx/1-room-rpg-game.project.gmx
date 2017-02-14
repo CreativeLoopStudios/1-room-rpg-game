@@ -70,6 +70,7 @@
   <objects name="objects">
     <objects name="Enemies">
       <object>objects\Peasant</object>
+      <object>objects\Enemy</object>
     </objects>
     <objects name="GUI">
       <object>objects\CraftingGUI</object>
