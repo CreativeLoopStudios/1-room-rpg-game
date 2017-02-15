@@ -28,6 +28,7 @@ if(itemInRange)
         
         with(itemInRange)
         {
+            AddToHand(object_index);
             visible = false;
         }
     }
@@ -35,7 +36,7 @@ if(itemInRange)
     {
         with(itemInRange)
         {
-            AddToInv(object_index);
+            AddToCrafting(object_index);
             visible = false;
         }
     }

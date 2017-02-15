@@ -17,7 +17,8 @@
     <sprites name="Items">
       <sprite>sprites\sHammer</sprite>
       <sprite>sprites\sAxe</sprite>
-      <sprite>sprites\nosprite</sprite>
+      <sprite>sprites\sPlank</sprite>
+      <sprite>sprites\sNails</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\sPlayerFront</sprite>
@@ -49,9 +50,8 @@
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
-      <script>scripts\AddToInv.gml</script>
-      <script>scripts\ManageObjects.gml</script>
-      <script>scripts\StartingValues.gml</script>
+      <script>scripts\AddToCrafting.gml</script>
+      <script>scripts\AddToHand.gml</script>
     </scripts>
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
@@ -83,6 +83,8 @@
       </objects>
       <object>objects\Item</object>
       <object>objects\Inventory</object>
+      <object>objects\Plank</object>
+      <object>objects\Nails</object>
     </objects>
     <objects name="Player">
       <object>objects\Player</object>
@@ -109,6 +111,10 @@
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
   </rooms>
+  <constants number="2">
+    <constant name="CELL_WIDTH">32</constant>
+    <constant name="CELL_HEIGHT">32</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
