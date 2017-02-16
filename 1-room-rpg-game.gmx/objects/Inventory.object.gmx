@@ -31,6 +31,8 @@ totalCraftingSlots = 2;
 
 spaceBetweenItens = 64;
 
+currentCraftSlot = 0;
+
 for(var i = 0; i &lt; totalCraftingSlots; i++)
 {
     craftSlot[i] = noone;
@@ -39,6 +41,40 @@ for(var i = 0; i &lt; totalCraftingSlots; i++)
 for(var i = 0; i &lt; totalHandSlots; i++)
 {
     handSlot[i] = noone;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// check for crafting
+if(instance_exists(GUI))
+{
+    if(currentCraftSlot == totalCraftingSlots)
+    {
+        GUI.craftingOk = true;
+    }
+    else
+    {
+        GUI.craftingOk = false;
+    }
 }
 </string>
           </argument>
@@ -66,7 +102,7 @@ for(var i = 0; i &lt; totalHandSlots; i++)
 if(instance_exists(GUI))
 {
     var xx = GUI.x + 30;
-    var yy = GUI.y + 32;
+    var yy = GUI.y + 32 + GUI.heightCraftingGUI;
     
     for(var i = 0; i &lt; totalCraftingSlots; i++)
     {

@@ -20,7 +20,7 @@ else if(direction == 270)
     itemInRange = collision_rectangle(x - middleWidthPlayer, y + middleHeightPlayer, x + middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
 }
 
-if(itemInRange)
+if(itemInRange and itemInRange.visible)
 {
     if(object_is_ancestor(itemInRange.object_index, Weapon))
     {
@@ -38,10 +38,13 @@ if(itemInRange)
     }
     else
     {
-        with(itemInRange)
+        var itemPicked = AddToCrafting(itemInRange.object_index);
+        if(itemPicked)
         {
-            AddToCrafting(object_index);
-            visible = false;
+            with(itemInRange)
+            {
+                visible = false;
+            }
         }
     }
 }

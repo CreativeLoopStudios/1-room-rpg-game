@@ -31,6 +31,8 @@ heightCraftingGUI = sprite_get_height(sCraftingGUI);
 
 x = room_width - widthCraftingGUI;
 y = room_height - (heightCraftingGUI * 2) - 32;
+
+craftingOk = false;
 </string>
           </argument>
         </arguments>
@@ -63,7 +65,14 @@ var heightHandGUI = sprite_get_height(sHandGUI);
 
 currentY += heightCraftingGUI;
 
-draw_sprite_ext(sCraftingGUI, 0, x, currentY, 1, 1, 0, c_white, 1);
+if(craftingOk)
+{
+    draw_sprite_ext(sCraftingGUI, 0, x, currentY, 1, 1, 0, c_yellow, 1);
+}
+else
+{
+    draw_sprite_ext(sCraftingGUI, 0, x, currentY, 1, 1, 0, c_white, 1);
+}
 </string>
           </argument>
         </arguments>

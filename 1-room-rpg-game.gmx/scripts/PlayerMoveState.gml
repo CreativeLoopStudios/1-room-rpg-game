@@ -69,7 +69,7 @@ if(e_key)
 }
 
 // drop left hand item
-if(f_key and leftHandWeapon)
+if(f_key and leftHandItem)
 {
     DropItem(0, ITEM_HAND);
     leftHandItem = noone;
@@ -80,4 +80,10 @@ if(g_key and rightHandWeapon)
 {
     DropItem(1, ITEM_HAND);
     rightHandWeapon = noone;
+}
+
+// drop crafting itens
+if(q_key)
+{
+    DropItem(0, ITEM_CRAFTING);
 }

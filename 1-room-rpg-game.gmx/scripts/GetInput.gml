@@ -16,6 +16,12 @@ f_key = keyboard_check_pressed(ord('F'));
 // drop right hand button
 g_key = keyboard_check_pressed(ord('G'));
 
+// drop itens on crafting inventory
+q_key = keyboard_check_pressed(ord('Q'));
+
+// craft!!!
+c_key = keyboard_check_pressed(ord('C'));
+
 // Override the controls for a gamepad
 /*
 var gp_id = 0;
