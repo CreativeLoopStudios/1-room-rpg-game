@@ -1,13 +1,19 @@
-/// AddToHand()
+/// AddToHand(sprite_index, slot)
 var spriteIndex = argument0;
+var slot = argument1;
+
+var picked = false;
 
 if(instance_exists(Inventory))
 {
-    for(var i = 0; i < Inventory.totalHandSlots; i++)
+    with(Inventory)
     {
-        if(Inventory.handSlot[i] == noone){
-            Inventory.handSlot[i] = spriteIndex;
-            break;
+        if(handSlot[slot] == noone)
+        {
+            handSlot[slot] = spriteIndex;
+            picked = true;
         }
     }
 }
+
+return picked;

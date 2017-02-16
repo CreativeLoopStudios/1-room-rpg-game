@@ -24,12 +24,16 @@ if(itemInRange)
 {
     if(object_is_ancestor(itemInRange.object_index, Weapon))
     {
-        rightHandWeapon = itemInRange;
+        var itemPicked = AddToHand(itemInRange.object_index, 1);
         
-        with(itemInRange)
+        if(itemPicked)
         {
-            AddToHand(object_index);
-            visible = false;
+            rightHandWeapon = itemInRange;
+        
+            with(itemInRange)
+            {
+                visible = false;
+            }
         }
     }
     else

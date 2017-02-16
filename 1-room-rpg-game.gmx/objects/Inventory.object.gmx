@@ -29,21 +29,16 @@
 totalHandSlots = 2;
 totalCraftingSlots = 2;
 
-handCurSlot = 0;
-craftCurSlot = 0;
+spaceBetweenItens = 64;
 
 for(var i = 0; i &lt; totalCraftingSlots; i++)
 {
     craftSlot[i] = noone;
-    craftCoordX[i] = 0;
-    craftCoordY[i] = 0;
 }
 
 for(var i = 0; i &lt; totalHandSlots; i++)
 {
     handSlot[i] = noone;
-    handCoordX[i] = 0;
-    handCoordY[i] = 0;
 }
 </string>
           </argument>
@@ -70,24 +65,17 @@ for(var i = 0; i &lt; totalHandSlots; i++)
             <string>/// draw in crafting
 if(instance_exists(GUI))
 {
-    var startX = GUI.x;
-    var startY = GUI.y;
-
-    var xx = startX + 16;
-    var yy = startY + 16;
+    var xx = GUI.x + 30;
+    var yy = GUI.y + 32;
     
     for(var i = 0; i &lt; totalCraftingSlots; i++)
     {
-        craftCoordX[craftCurSlot] = xx;
-        craftCoordX[craftCurSlot] = yy;
-        
-        craftCurSlot++;
-        yy += 48;
-        
         var item = craftSlot[i];
-        if(item){
-            draw_sprite(item.sprite_index, 0, craftCoordX[i]+8, craftCoordY[i]+8);
+        if(item != noone){
+            draw_sprite(item.sprite_index, 0, xx, yy);
         }
+        
+        xx += spaceBetweenItens;
     }
 }
 </string>
@@ -111,24 +99,19 @@ if(instance_exists(GUI))
           <argument>
             <kind>1</kind>
             <string>/// draw in hand
-/// draw in crafting
 if(instance_exists(GUI))
 {
-    var xx = GUI.x + 16;
-    var yy = GUI.y + 16;
+    var xx = GUI.x + 30;
+    var yy = GUI.y + 32;
     
     for(var i = 0; i &lt; totalHandSlots; i++)
     {
-        handCoordX[handCurSlot] = xx;
-        handCoordX[handCurSlot] = yy;
-    
         var item = handSlot[i];
-        if(item){
-            draw_sprite(item.sprite_index, 0, handCoordX[i]+8, handCoordY[i]+8);
+        if(item != noone){
+            draw_sprite(item.sprite_index, 0, xx, yy);
         }
         
-        handCurSlot++;
-        xx += 48;
+        xx += spaceBetweenItens;
     }
 }
 </string>

@@ -70,7 +70,7 @@ state = PlayerMoveState;
           <argument>
             <kind>1</kind>
             <string>/// execute state
-GetMovementInput();
+GetInput();
 
 script_execute(state);
 
