@@ -154,6 +154,44 @@ if(instance_exists(GUI))
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw crafting result
+if(instance_exists(GUI))
+{
+    if(GUI.craftingOk and craftSlot[0] != noone and craftSlot[1] != noone)
+    {
+        var xx = (GUI.x + 30) + (totalCraftingSlots * spaceBetweenItens);
+        var yy = GUI.y + 32 + GUI.heightCraftingGUI;
+    
+        var objIndexLeft = craftSlot[0].object_index;
+        var objIndexRight = craftSlot[1].object_index;
+        
+        if((objIndexLeft == Plank and objIndexRight == Nails)
+            or (objIndexLeft == Nails and objIndexRight == Plank))
+        {
+            draw_sprite_ext(sPlankWithNails, 0, xx, yy, 1, 1, 0, c_white, 1);
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>

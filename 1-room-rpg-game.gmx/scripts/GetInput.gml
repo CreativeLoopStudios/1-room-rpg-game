@@ -11,10 +11,10 @@ space = keyboard_check_pressed(vk_space);
 e_key = keyboard_check_pressed(ord('E'));
 
 // drop left hand button
-f_key = keyboard_check_pressed(ord('F'));
+one_key = keyboard_check_pressed(ord('1'));
 
 // drop right hand button
-g_key = keyboard_check_pressed(ord('G'));
+two_key = keyboard_check_pressed(ord('2'));
 
 // drop itens on crafting inventory
 q_key = keyboard_check_pressed(ord('Q'));

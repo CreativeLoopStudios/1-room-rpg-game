@@ -69,14 +69,14 @@ if(e_key)
 }
 
 // drop left hand item
-if(f_key and leftHandItem)
+if(one_key and leftHandItem)
 {
     DropItem(0, ITEM_HAND);
     leftHandItem = noone;
 }
 
 // drop right hand item
-if(g_key and rightHandWeapon)
+if(two_key and rightHandWeapon)
 {
     DropItem(1, ITEM_HAND);
     rightHandWeapon = noone;

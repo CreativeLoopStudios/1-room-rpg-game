@@ -67,7 +67,7 @@ currentY += heightCraftingGUI;
 
 if(craftingOk)
 {
-    draw_sprite_ext(sCraftingGUI, 0, x, currentY, 1, 1, 0, c_yellow, 1);
+    draw_sprite_ext(sCraftingGUI, 1, x, currentY, 1, 1, 0, c_yellow, 1);
 }
 else
 {
