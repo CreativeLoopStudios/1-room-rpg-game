@@ -29,11 +29,7 @@ if(itemInRange and itemInRange.visible)
         if(itemPicked)
         {
             rightHandWeapon = itemInRange;
-        
-            with(itemInRange)
-            {
-                visible = false;
-            }
+            itemInRange.visible = false;
         }
     }
     else
@@ -41,10 +37,7 @@ if(itemInRange and itemInRange.visible)
         var itemPicked = AddToCrafting(itemInRange.object_index);
         if(itemPicked)
         {
-            with(itemInRange)
-            {
-                visible = false;
-            }
+            itemInRange.visible = false;
         }
     }
 }

@@ -60,6 +60,8 @@
       <script>scripts\AddToCrafting.gml</script>
       <script>scripts\AddToHand.gml</script>
       <script>scripts\DropItem.gml</script>
+      <script>scripts\CraftItem.gml</script>
+      <script>scripts\CleanCraftInventory.gml</script>
     </scripts>
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
@@ -93,6 +95,7 @@
       <object>objects\Inventory</object>
       <object>objects\Plank</object>
       <object>objects\Nails</object>
+      <object>objects\PlankWithNails</object>
     </objects>
     <objects name="Player">
       <object>objects\Player</object>
@@ -119,11 +122,12 @@
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
   </rooms>
-  <constants number="4">
+  <constants number="5">
     <constant name="ITEM_HAND">1</constant>
     <constant name="ITEM_CRAFTING">2</constant>
     <constant name="CELL_WIDTH">32</constant>
     <constant name="CELL_HEIGHT">32</constant>
+    <constant name="CRAFT_PLANK_WITH_NAILS">10</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

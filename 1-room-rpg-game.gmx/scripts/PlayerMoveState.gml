@@ -87,3 +87,9 @@ if(q_key)
 {
     DropItem(0, ITEM_CRAFTING);
 }
+
+// craft item
+if(c_key)
+{
+    CraftItem();
+}

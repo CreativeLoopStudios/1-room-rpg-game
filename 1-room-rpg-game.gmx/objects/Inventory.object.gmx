@@ -42,6 +42,8 @@ for(var i = 0; i &lt; totalHandSlots; i++)
 {
     handSlot[i] = noone;
 }
+
+itemToCraft = 0;
 </string>
           </argument>
         </arguments>
@@ -184,6 +186,7 @@ if(instance_exists(GUI))
         if((objIndexLeft == Plank and objIndexRight == Nails)
             or (objIndexLeft == Nails and objIndexRight == Plank))
         {
+            itemToCraft = CRAFT_PLANK_WITH_NAILS;
             draw_sprite_ext(sPlankWithNails, 0, xx, yy, 1, 1, 0, c_white, 1);
         }
     }
