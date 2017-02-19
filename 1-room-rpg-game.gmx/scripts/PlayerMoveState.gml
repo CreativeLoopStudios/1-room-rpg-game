@@ -72,20 +72,22 @@ if(e_key)
 if(one_key and leftHandItem)
 {
     DropItem(0, ITEM_HAND);
-    leftHandItem = noone;
 }
 
 // drop right hand item
 if(two_key and rightHandWeapon)
 {
     DropItem(1, ITEM_HAND);
-    rightHandWeapon = noone;
 }
 
 // drop crafting itens
-if(q_key)
+if(three_key)
 {
     DropItem(0, ITEM_CRAFTING);
+}
+
+if(four_key) {
+    DropItem(1, ITEM_CRAFTING);
 }
 
 // craft item

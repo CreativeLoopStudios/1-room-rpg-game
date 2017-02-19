@@ -92,11 +92,18 @@
         <object>objects\Hammer</object>
         <object>objects\Axe</object>
       </objects>
-      <object>objects\Item</object>
-      <object>objects\Inventory</object>
-      <object>objects\Plank</object>
-      <object>objects\Nails</object>
-      <object>objects\PlankWithNails</object>
+      <objects name="Craft">
+        <object>objects\Plank</object>
+        <object>objects\Nails</object>
+      </objects>
+      <objects name="Crafted">
+        <object>objects\PlankWithNails</object>
+        <object>objects\CraftedItem</object>
+      </objects>
+      <objects name="Util">
+        <object>objects\Item</object>
+        <object>objects\Inventory</object>
+      </objects>
     </objects>
     <objects name="Player">
       <object>objects\Player</object>
