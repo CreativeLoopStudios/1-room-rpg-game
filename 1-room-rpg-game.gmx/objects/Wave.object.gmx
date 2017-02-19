@@ -28,8 +28,8 @@
             <string>///Create Variables
 
 waveNumber = 0
-timeBeforeFirstWave = 30 * room_speed;
-timeBetweenWave = 10 * room_speed;
+timeBeforeFirstWave = 9 * room_speed; //1 sec delay for first char
+timeBetweenWave = 20 * room_speed;
 timeOfWave = 60 * room_speed;
 timeBetweenMonsters = 5 * room_speed;
 
@@ -90,7 +90,7 @@ alarm[0] = timeBetweenWave;
             <kind>1</kind>
             <string>///New Monster
 if(waveOn) {
-    var windowNumber = random_range(1,numerOfWindows);
+    var windowNumber = 1//random_range(1,numerOfWindows);
     var windowObjec = instance_find(Window,windowNumber);
     var xAdjust = 0;
     var yAdjust = 0;
@@ -105,7 +105,23 @@ if(waveOn) {
         xAdjust -= ajustCenterOfEnemy;
     }
     
-    instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant);
+    with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))
+    {
+        entrance = windowObjec;
+        if(!entrance.isOpen || place_meeting(x, y, Solid)) 
+        {
+            canEnter = false;
+            visible = false;
+            spawnX = x;
+            spawnY = y;
+            x = 0;
+            y = 0;
+        } 
+        else 
+        {
+            canEnter = true;
+        }
+    }
     
     alarm[1] = timeBetweenMonsters;
 }
@@ -133,7 +149,7 @@ if(waveOn) {
             <kind>1</kind>
             <string>///New Wave
 if(!waveOn) {
-    alarm[1] = timeBetweenMonsters;
+    alarm[1] = 1 * room_speed;
     alarm[2] = timeOfWave;
     waveOn = true;
 }

@@ -32,8 +32,38 @@ image_speed = 0;
 numberOfPlanks = 0;
 numberOfPlanksShow = 0;
 numberOfHits = 0;
+isOpen = false;
+shakeTime = 0.25 * room_speed;
+isShaking = false;
+originalX = x;
+originalY = y;
 
-
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///End SHake
+x = originalX;
+y = originalY;
+isShaking = false;
 </string>
           </argument>
         </arguments>
@@ -56,13 +86,20 @@ numberOfHits = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Check Sprite 
+            <string>//Check Sprite
 
+if(isShaking) {
+    x = originalX + random_range(-2,2);
+    y = originalY + random_range(-2,2);
+} 
+
+isOpen = false;
 if(numberOfPlanks == 0) 
 {
     if(numberOfHits = 1)
     {
         image_index = 9
+        isOpen = true;
     }
     else
     {
@@ -74,6 +111,7 @@ else if(numberOfPlanks == 1)
     if(numberOfHits = 3)
     {
         image_index = 8
+        isOpen = true;
     }
     else if(numberOfHits = 2)
     {
@@ -93,6 +131,7 @@ else if(numberOfPlanks == 2)
     if(numberOfHits = 4)
     {
         image_index = 8
+        isOpen = true;
     }
     else if(numberOfHits = 3)
     {
@@ -117,6 +156,7 @@ else if(numberOfPlanks == 3)
     if(numberOfHits = 6)
     {
         image_index = 8
+        isOpen = true;
     }
     else if(numberOfHits = 5)
     {
