@@ -31,6 +31,8 @@ totalCraftingSlots = 2;
 
 spaceBetweenItens = 64;
 
+currentCraftSlot = 0;
+
 for(var i = 0; i &lt; totalCraftingSlots; i++)
 {
     craftSlot[i] = noone;
@@ -39,6 +41,42 @@ for(var i = 0; i &lt; totalCraftingSlots; i++)
 for(var i = 0; i &lt; totalHandSlots; i++)
 {
     handSlot[i] = noone;
+}
+
+itemToCraft = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// check for crafting
+if(instance_exists(GUI))
+{
+    if(currentCraftSlot == totalCraftingSlots)
+    {
+        GUI.craftingOk = true;
+    }
+    else
+    {
+        GUI.craftingOk = false;
+    }
 }
 </string>
           </argument>
@@ -65,8 +103,8 @@ for(var i = 0; i &lt; totalHandSlots; i++)
             <string>/// draw in crafting
 if(instance_exists(GUI))
 {
-    var xx = GUI.x + 30;
-    var yy = GUI.y + 32;
+    var xx = GUI.x + (GUI.spacing * 2);
+    var yy = GUI.y + (GUI.spacing * 2);
     
     for(var i = 0; i &lt; totalCraftingSlots; i++)
     {
@@ -101,8 +139,8 @@ if(instance_exists(GUI))
             <string>/// draw in hand
 if(instance_exists(GUI))
 {
-    var xx = GUI.x + 30;
-    var yy = GUI.y + 32;
+    var xx = (GUI.spacing + 1) * 3;
+    var yy = GUI.y + (GUI.spacing * 2);
     
     for(var i = 0; i &lt; totalHandSlots; i++)
     {
@@ -112,6 +150,45 @@ if(instance_exists(GUI))
         }
         
         xx += spaceBetweenItens;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw crafting result
+if(instance_exists(GUI))
+{
+    if(GUI.craftingOk and craftSlot[0] != noone and craftSlot[1] != noone)
+    {
+        var xx = (GUI.x + 30) + (totalCraftingSlots * spaceBetweenItens);
+        var yy = GUI.y + 32 + GUI.heightCraftingGUI;
+    
+        var objIndexLeft = craftSlot[0].object_index;
+        var objIndexRight = craftSlot[1].object_index;
+        
+        if((objIndexLeft == Plank and objIndexRight == Nails)
+            or (objIndexLeft == Nails and objIndexRight == Plank))
+        {
+            itemToCraft = CRAFT_PLANK_WITH_NAILS;
+            draw_sprite_ext(sPlankWithNails, 0, xx, yy, 1, 1, 0, c_white, 1);
+        }
     }
 }
 </string>

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>highlight = false;
+isWindow = false;
 highlight_shader = shader_get_uniform(shHighlight, "f_newColour");
 </string>
           </argument>
@@ -52,26 +53,16 @@ highlight_shader = shader_get_uniform(shHighlight, "f_newColour");
             <string>///Check player colision
 
 var inRange = noone;
-var middleWidthPlayer = sprite_get_width(sPlayerFront) / 2;
-var middleHeightPlayer = sprite_get_height(sPlayerFront) / 2;
 
 if(instance_exists(Player)) {
     with(Player) {
-        if(direction == 0)
-        {   
-            inRange = collision_rectangle(x + middleWidthPlayer, y, x + middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
-        }
-        else if(direction == 180)
+        inRange = IsInRange(10, Item);
+        if(inRange == noone)
         {
-            inRange = collision_rectangle(x - middleWidthPlayer, y, x - middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
-        }
-        else if(direction == 90)
-        {
-            inRange = collision_rectangle(x - middleWidthPlayer, y, x + middleWidthPlayer, y, Item, false, true);
-        }
-        else if(direction == 270)
-        {
-            inRange = collision_rectangle(x - middleWidthPlayer, y + middleHeightPlayer, x + middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
+            if(leftHandItem != noone &amp;&amp; leftHandItem.object_index == PlankWithNails) 
+            {
+                inRange = IsInRange(30, RoomItem);
+            }
         }
     }
 }
@@ -79,6 +70,13 @@ if(instance_exists(Player)) {
 if(inRange != noone &amp;&amp; inRange.id == self.id)
 { 
     highlight = true;
+    if(inRange.object_index == Window) {
+        isWindow = true;
+    } 
+    else 
+    {
+        isWindow = false;
+    }
 } 
 else 
 {
@@ -107,16 +105,63 @@ else
           <argument>
             <kind>1</kind>
             <string>if(highlight) {
-    shader_set(shHighlight);
-    shader_set_uniform_f(highlight_shader, 1.0,1.0,0.5,1.0);
-    draw_sprite(sprite_index, image_index, x + 1, y);
-    draw_sprite(sprite_index, image_index, x - 1, y);
-    draw_sprite(sprite_index, image_index, x, y + 1);
-    draw_sprite(sprite_index, image_index, x, y - 1);
-    shader_reset();
+
+    var xoffset;
+    var yoffset;
+    var spriteWidth = sprite_width;
+    var spriteHeight = sprite_height;
+    
+    if(image_angle == 0)
+    {  
+        xoffset = sprite_xoffset;
+        yoffset = sprite_yoffset;
+    }
+    else if(image_angle = 90) 
+    {
+        xoffset = sprite_yoffset;
+        yoffset = -sprite_xoffset;
+    }
+    else if(image_angle = 180) 
+    {
+        xoffset = -sprite_xoffset;
+        yoffset = -sprite_yoffset;
+    }
+    else if(image_angle = 270) 
+    {
+        xoffset = -sprite_yoffset;
+        yoffset = sprite_xoffset;
+    }
+    
+    if(isWindow)
+    {
+        spriteHeight = sprite_height/2;
+    }
+
+    
+    if (shaders_are_supported() &amp;&amp; shader_is_compiled(shHighlight))
+    {  
+        shader_set(shHighlight);
+        shader_set_uniform_f(highlight_shader, 1.0,1.0,1.0,1.0);
+
+        draw_sprite_general(sprite_index, image_index, 0, 0, spriteWidth, spriteHeight, x - xoffset + 1, y - yoffset, image_xscale, image_yscale, image_angle, c_white, c_white, c_white, c_white, image_alpha);
+        draw_sprite_general(sprite_index, image_index, 0, 0, spriteWidth, spriteHeight, x - xoffset - 1, y - yoffset, image_xscale, image_yscale, image_angle, c_white, c_white, c_white, c_white, image_alpha);
+        draw_sprite_general(sprite_index, image_index, 0, 0, spriteWidth, spriteHeight, x - xoffset, y - yoffset - 1, image_xscale, image_yscale, image_angle, c_white, c_white, c_white, c_white, image_alpha);
+        draw_sprite_general(sprite_index, image_index, 0, 0, spriteWidth, spriteHeight, x - xoffset, y - yoffset + 1, image_xscale, image_yscale, image_angle, c_white, c_white, c_white, c_white, image_alpha);
+
+        shader_reset();
+    }
+    else
+    {
+        draw_set_blend_mode(bm_add)
+        for(c = 0;c &lt; 360;c += 360/10)
+        {
+            draw_sprite_general(sprite_index, image_index, 0, 0, spriteWidth, spriteHeight, x - xoffset + lengthdir_x(4,c), y - yoffset + + lengthdir_y(4,c), image_xscale, image_yscale, image_angle, c_white, c_white, c_white, c_white, image_alpha);
+        }
+        draw_set_blend_mode(bm_normal)
+    }
+   
 }
 
- //draw_sprite(sprite_index, image_index, x, y);
  draw_self();
 </string>
           </argument>

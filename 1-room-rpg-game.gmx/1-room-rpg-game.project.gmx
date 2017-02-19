@@ -7,8 +7,13 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Enemies">
-      <sprite>sprites\sPeasant</sprite>
       <sprite>sprites\sEnemyMask</sprite>
+      <sprites name="Peasant">
+        <sprite>sprites\sPeasantBack</sprite>
+        <sprite>sprites\sPeasantLeft</sprite>
+        <sprite>sprites\sPeasantFront</sprite>
+        <sprite>sprites\sPeasantRight</sprite>
+      </sprites>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\sCraftingGUI</sprite>
@@ -18,16 +23,23 @@
       <sprite>sprites\sHammer</sprite>
       <sprite>sprites\sAxe</sprite>
       <sprite>sprites\sPlank</sprite>
+      <sprite>sprites\sPlankWithNails</sprite>
       <sprite>sprites\sNails</sprite>
     </sprites>
     <sprites name="Player">
-      <sprite>sprites\sPlayerFront</sprite>
-      <sprite>sprites\sPlayerBack</sprite>
-      <sprite>sprites\sPlayerRight</sprite>
-      <sprite>sprites\sPlayerLeft</sprite>
+      <sprites name="PlayerWithHammer">
+        <sprite>sprites\sPlayerWithHammerFront</sprite>
+        <sprite>sprites\sPlayerWithHammerBack</sprite>
+        <sprite>sprites\sPlayerWithHammerLeft</sprite>
+        <sprite>sprites\sPlayerWithHammerRight</sprite>
+      </sprites>
+      <sprite>sprites\sAttackDownHitbox</sprite>
       <sprite>sprites\sAttackLeftRightHitbox</sprite>
       <sprite>sprites\sAttackUpHitbox</sprite>
-      <sprite>sprites\sAttackDownHitbox</sprite>
+      <sprite>sprites\sPlayerBack</sprite>
+      <sprite>sprites\sPlayerFront</sprite>
+      <sprite>sprites\sPlayerLeft</sprite>
+      <sprite>sprites\sPlayerRight</sprite>
       <sprite>sprites\sPlayerMask</sprite>
     </sprites>
     <sprites name="Room">
@@ -47,22 +59,33 @@
     <scripts name="Enemies">
       <script>scripts\PeasantChasingPlayerState.gml</script>
       <script>scripts\PeasantHitState.gml</script>
+      <script>scripts\PeasantSetSprite.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
       <script>scripts\AddToCrafting.gml</script>
       <script>scripts\AddToHand.gml</script>
       <script>scripts\DropItem.gml</script>
+      <script>scripts\CraftItem.gml</script>
+      <script>scripts\CleanCraftInventory.gml</script>
     </scripts>
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
       <script>scripts\PlayerAttackState.gml</script>
+      <script>scripts\PlayerPerformAction.gml</script>
+      <script>scripts\PlayerSetSprite.gml</script>
+      <script>scripts\AddPlankToWindowIfPossible.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetInput.gml</script>
       <script>scripts\ApplyFriction.gml</script>
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
+      <script>scripts\IsInRange.gml</script>
+    </scripts>
+    <scripts name="Room">
+      <script>scripts\AddPlank.gml</script>
+      <script>scripts\HitWindow.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -82,10 +105,18 @@
         <object>objects\Hammer</object>
         <object>objects\Axe</object>
       </objects>
-      <object>objects\Item</object>
-      <object>objects\Inventory</object>
-      <object>objects\Plank</object>
-      <object>objects\Nails</object>
+      <objects name="Craft">
+        <object>objects\Plank</object>
+        <object>objects\Nails</object>
+      </objects>
+      <objects name="Crafted">
+        <object>objects\PlankWithNails</object>
+        <object>objects\CraftedItem</object>
+      </objects>
+      <objects name="Util">
+        <object>objects\Item</object>
+        <object>objects\Inventory</object>
+      </objects>
     </objects>
     <objects name="Player">
       <object>objects\Player</object>
@@ -96,6 +127,7 @@
     <objects name="Room">
       <object>objects\Window</object>
       <object>objects\MonsterTable</object>
+      <object>objects\RoomItem</object>
     </objects>
     <objects name="Traps">
       <object>objects\BearTrap</object>
@@ -112,11 +144,13 @@
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
   </rooms>
-  <constants number="4">
+  <constants number="6">
+    <constant name="MAX_PLANKS">3</constant>
     <constant name="ITEM_HAND">1</constant>
     <constant name="ITEM_CRAFTING">2</constant>
     <constant name="CELL_WIDTH">32</constant>
     <constant name="CELL_HEIGHT">32</constant>
+    <constant name="CRAFT_PLANK_WITH_NAILS">10</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

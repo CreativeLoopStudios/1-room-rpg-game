@@ -1,47 +1,21 @@
 /// PickItemIfInRange()
-var itemInRange = noone;
-var middleWidthPlayer = sprite_get_width(sPlayerFront) / 2;
-var middleHeightPlayer = sprite_get_height(sPlayerFront) / 2;
+var itemPicked = false;
+var itemInRange = IsInRange(10, Item);
 
-if(direction == 0)
-{   
-    itemInRange = collision_rectangle(x + middleWidthPlayer, y, x + middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
-}
-else if(direction == 180)
-{
-    itemInRange = collision_rectangle(x - middleWidthPlayer, y, x - middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
-}
-else if(direction == 90)
-{
-    itemInRange = collision_rectangle(x - middleWidthPlayer, y, x + middleWidthPlayer, y, Item, false, true);
-}
-else if(direction == 270)
-{
-    itemInRange = collision_rectangle(x - middleWidthPlayer, y + middleHeightPlayer, x + middleWidthPlayer, y + middleHeightPlayer, Item, false, true);
-}
-
-if(itemInRange)
+if(itemInRange && itemInRange.visible)
 {
     if(object_is_ancestor(itemInRange.object_index, Weapon))
     {
-        var itemPicked = AddToHand(itemInRange.object_index, 1);
-        
-        if(itemPicked)
-        {
-            rightHandWeapon = itemInRange;
-        
-            with(itemInRange)
-            {
-                visible = false;
-            }
-        }
+        itemPicked = AddToHand(itemInRange, 1);
+    }
+    else if(object_is_ancestor(itemInRange.object_index, CraftedItem))
+    {
+        itemPicked = AddToHand(itemInRange, 0);
     }
     else
     {
-        with(itemInRange)
-        {
-            AddToCrafting(object_index);
-            visible = false;
-        }
+        itemPicked = AddToCrafting(itemInRange);
     }
 }
+
+return itemPicked;

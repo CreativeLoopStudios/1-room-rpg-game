@@ -1,5 +1,5 @@
-/// AddToHand(sprite_index, slot)
-var spriteIndex = argument0;
+/// AddToHand(item, slot)
+var item = argument0;
 var slot = argument1;
 
 var picked = false;
@@ -10,10 +10,23 @@ if(instance_exists(Inventory))
     {
         if(handSlot[slot] == noone)
         {
-            handSlot[slot] = spriteIndex;
+            handSlot[slot] = item.object_index;
             picked = true;
         }
     }
+}
+
+if (picked) 
+{
+    if(slot == 0) {
+        leftHandItem = item;
+    } else {
+        rightHandWeapon = item;
+    }
+    
+    item.visible = false;
+    item.x = 0;
+    item.y = 0;
 }
 
 return picked;
