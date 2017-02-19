@@ -59,13 +59,17 @@ if(instance_exists(Player)) {
         inRange = IsInRange(10, Item);
         if(inRange == noone)
         {
-            inRange = IsInRange(30, RoomItem);
+            if(leftHandItem != noone &amp;&amp; leftHandItem.object_index == PlankWithNails) 
+            {
+                inRange = IsInRange(30, RoomItem);
+            }
         }
     }
 }
 
 if(inRange != noone &amp;&amp; inRange.id == self.id)
 { 
+    highlight = true;
     if(inRange.object_index == Window) {
         isWindow = true;
     } 
@@ -73,7 +77,6 @@ if(inRange != noone &amp;&amp; inRange.id == self.id)
     {
         isWindow = false;
     }
-    highlight = true;
 } 
 else 
 {

@@ -66,6 +66,8 @@
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
       <script>scripts\PlayerAttackState.gml</script>
+      <script>scripts\PlayerPerformAction.gml</script>
+      <script>scripts\AddPlankToWindowIfPossible.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetInput.gml</script>
@@ -73,6 +75,10 @@
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
       <script>scripts\IsInRange.gml</script>
+    </scripts>
+    <scripts name="Room">
+      <script>scripts\AddPlank.gml</script>
+      <script>scripts\HitWindow.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -131,7 +137,8 @@
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
   </rooms>
-  <constants number="5">
+  <constants number="6">
+    <constant name="MAX_PLANKS">3</constant>
     <constant name="ITEM_HAND">1</constant>
     <constant name="ITEM_CRAFTING">2</constant>
     <constant name="CELL_WIDTH">32</constant>

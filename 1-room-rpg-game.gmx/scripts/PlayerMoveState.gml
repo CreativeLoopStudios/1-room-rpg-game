@@ -65,7 +65,7 @@ if(space and rightHandWeapon and attackTimer == 0)
 // get item on ground
 if(e_key)
 {
-    PickItemIfInRange();
+    PlayerPerformAction();
 }
 
 // drop left hand item

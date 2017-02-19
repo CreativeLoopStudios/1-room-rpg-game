@@ -57,17 +57,20 @@ if(global.debug and keyboard_check_pressed(ord('R')))
 
 if(global.debug and keyboard_check_pressed(ord('5')))
 {
-    AddToHand(instance_create(0, 0, PlankWithNails), 0);
+    with(Player){
+        AddToHand(instance_create(0, 0, PlankWithNails), 0);
+    }
 }
 
 if(global.debug and keyboard_check_pressed(ord('0')))
 {
     with(Window) 
     {
-        numberOfPlanks++;
-        if(numberOfPlanks &gt; 3) {
-            numberOfPlanks = 0;
+        numberOfPlanksShow++;
+        if(numberOfPlanksShow &gt; MAX_PLANKS) {
+            numberOfPlanksShow = 0;
         }
+        numberOfPlanks = numberOfPlanksShow;
     }
 }
 
@@ -75,7 +78,8 @@ if(global.debug and keyboard_check_pressed(ord('9')))
 {
     with(Window) 
     {
-        numberOfHits++;
+        HitWindow();
+        
         if(numberOfPlanks == 1 &amp;&amp; numberOfHits &gt; 3) ||
         (numberOfPlanks == 2 &amp;&amp; numberOfHits &gt; 4) ||
         (numberOfPlanks == 3 &amp;&amp; numberOfHits &gt; 6) ||

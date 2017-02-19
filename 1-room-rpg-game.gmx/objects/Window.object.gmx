@@ -30,8 +30,9 @@ event_inherited();
 
 image_speed = 0;
 numberOfPlanks = 0;
+numberOfPlanksShow = 0;
 numberOfHits = 0;
-isOpen = false;
+
 
 </string>
           </argument>
