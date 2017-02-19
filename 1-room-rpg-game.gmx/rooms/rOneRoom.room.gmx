@@ -70,6 +70,12 @@
     <instance objName="Nails" x="288" y="368" name="inst_DC532314" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Plank" x="288" y="280" name="inst_B28B1304" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Nails" x="344" y="272" name="inst_C6168A03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="648" y="344" name="inst_F09EDE57" locked="0" code="" scaleX="5.71875" scaleY="3.125" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="648" y="408" name="inst_AA2D2B03" locked="0" code="" scaleX="5.59375" scaleY="0.90625" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="544" y="328" name="inst_E60AA060" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="544" y="384" name="inst_CD9DB2B1" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="752" y="384" name="inst_0A20F725" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="752" y="328" name="inst_C418E496" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -62,7 +62,6 @@
       <script>scripts\DropItem.gml</script>
       <script>scripts\CraftItem.gml</script>
       <script>scripts\CleanCraftInventory.gml</script>
-      <script>scripts\IsItemInRange.gml</script>
     </scripts>
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
@@ -73,6 +72,7 @@
       <script>scripts\ApplyFriction.gml</script>
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
+      <script>scripts\IsInRange.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -107,6 +107,7 @@
     <objects name="Room">
       <object>objects\Window</object>
       <object>objects\MonsterTable</object>
+      <object>objects\RoomItem</object>
     </objects>
     <objects name="Traps">
       <object>objects\BearTrap</object>

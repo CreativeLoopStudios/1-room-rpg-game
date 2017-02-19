@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>10</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>RoomItem</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,7 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Init variables
+event_inherited();
+
 image_speed = 0;
+
 </string>
           </argument>
         </arguments>

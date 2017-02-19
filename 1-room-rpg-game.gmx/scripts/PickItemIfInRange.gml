@@ -1,5 +1,5 @@
 /// PickItemIfInRange()
-var itemInRange = IsItemInRange();
+var itemInRange = IsInRange(10, Item);
 
 if(itemInRange && itemInRange.visible)
 {
