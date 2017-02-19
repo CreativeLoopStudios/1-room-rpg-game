@@ -68,6 +68,7 @@
       <script>scripts\PlayerAttackState.gml</script>
       <script>scripts\PlayerPerformAction.gml</script>
       <script>scripts\AddPlankToWindowIfPossible.gml</script>
+      <script>scripts\SetPlayerSprite.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetInput.gml</script>
