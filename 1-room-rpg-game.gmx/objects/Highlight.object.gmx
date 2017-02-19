@@ -135,7 +135,7 @@ else
     }
 
     
-    if (false &amp;&amp; shaders_are_supported() &amp;&amp; shader_is_compiled(shHighlight))
+    if (shaders_are_supported() &amp;&amp; shader_is_compiled(shHighlight))
     {  
         shader_set(shHighlight);
         shader_set_uniform_f(highlight_shader, 1.0,1.0,1.0,1.0);
