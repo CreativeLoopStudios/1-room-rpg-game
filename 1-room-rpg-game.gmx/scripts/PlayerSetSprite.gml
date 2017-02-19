@@ -1,4 +1,4 @@
-///SetPlayerSprite
+///PlayerSetSprite
 var hasHammer = false;
 
 if(hspd > 0)

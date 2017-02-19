@@ -25,14 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>isNew = false;
-entrance = noone;
+            <string>
 //hit Window
 hitDorTime = 3 * room_speed;
 alarm[11] = hitDorTime;
+
+//spawn
+entrance = noone;
 canEnter = false;
 spawnX = 0;
 spawnY = 0;
+
+// animation speed
+animSpd = .1;
 </string>
           </argument>
         </arguments>

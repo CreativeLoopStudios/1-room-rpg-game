@@ -23,7 +23,7 @@ if((!up and !down) or (!right and !left))
     ApplyFriction(0.3);
 }
 
-SetPlayerSprite();
+PlayerSetSprite();
 
 // Move if needed
 Move(hspd, vspd, Solid);
