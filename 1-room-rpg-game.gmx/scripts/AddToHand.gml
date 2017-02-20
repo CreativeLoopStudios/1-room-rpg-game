@@ -6,16 +6,11 @@ var picked = false;
 
 if(instance_exists(Inventory))
 {
+    DropItem(slot, ITEM_HAND);
     with(Inventory)
     {
-        if(CountObjectsOnArray(handSlot) < totalHandSlots)
-        {
-            if(handSlot[slot] == noone)
-            {
-                handSlot[slot] = item;
-                picked = true;
-            }
-        }
+        handSlot[slot] = item;
+        picked = true;
     }
 }
 
