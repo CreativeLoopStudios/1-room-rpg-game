@@ -8,7 +8,7 @@ if(instance_exists(Inventory))
 {
     with(Inventory)
     {
-        if(array_length_1d(craftSlot) < totalCraftingSlots)
+        if(CountObjectsOnArray(craftSlot) < totalCraftingSlots)
         {
             if(craftSlot[slot] == noone)
             {

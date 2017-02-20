@@ -30,8 +30,6 @@ spacing = 16;
 widthCraftingGUI = sprite_get_width(sCraftingGUI) + spacing;
 heightCraftingGUI = sprite_get_height(sCraftingGUI) + spacing;
 
-
-
 x = room_width - widthCraftingGUI;
 y = room_height - heightCraftingGUI;
 

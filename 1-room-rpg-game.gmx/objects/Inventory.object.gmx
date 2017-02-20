@@ -67,7 +67,7 @@ itemToCraft = 0;
             <string>/// check for crafting
 if(instance_exists(GUI))
 {
-    if(array_length_1d(craftSlot) == totalCraftingSlots)
+    if(CountObjectsOnArray(craftSlot) == totalCraftingSlots)
     {
         GUI.craftingOk = true;
     }
@@ -175,9 +175,9 @@ if(instance_exists(GUI))
 {
     if(GUI.craftingOk and craftSlot[0] != noone and craftSlot[1] != noone)
     {
-        var xx = (GUI.x + 30) + (totalCraftingSlots * spaceBetweenItens);
-        var yy = GUI.y + 32 + GUI.heightCraftingGUI;
-    
+        var xx = GUI.x + (GUI.spacing * 1) + (totalCraftingSlots * spaceBetweenItens) + 14;
+        var yy = GUI.y + (GUI.spacing * 2);
+        
         var objIndexLeft = craftSlot[0].object_index;
         var objIndexRight = craftSlot[1].object_index;
         

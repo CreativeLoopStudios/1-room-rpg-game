@@ -8,22 +8,25 @@ if(instance_exists(Inventory))
 {
     with(Inventory)
     {
-        if(array_length_1d(handSlot) < totalHandSlots)
+        if(CountObjectsOnArray(handSlot) < totalHandSlots)
         {
             if(handSlot[slot] == noone)
             {
-                handSlot[slot] = object;
+                handSlot[slot] = item;
                 picked = true;
             }
         }
     }
 }
 
-if (picked) 
+if (picked)
 {
-    if(slot == 0) {
+    if(slot == 0)
+    {
         leftHandItem = item;
-    } else {
+    }
+    else
+    {
         rightHandWeapon = item;
     }
     

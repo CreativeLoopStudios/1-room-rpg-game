@@ -68,6 +68,7 @@
       <script>scripts\DropItem.gml</script>
       <script>scripts\CraftItem.gml</script>
       <script>scripts\CleanCraftInventory.gml</script>
+      <script>scripts\CountObjectsOnArray.gml</script>
     </scripts>
     <scripts name="Player">
       <script>scripts\PlayerMoveState.gml</script>
