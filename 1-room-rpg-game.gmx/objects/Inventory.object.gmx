@@ -31,8 +31,6 @@ totalCraftingSlots = 2;
 
 spaceBetweenItens = 64;
 
-currentCraftSlot = 0;
-
 for(var i = 0; i &lt; totalCraftingSlots; i++)
 {
     craftSlot[i] = noone;
@@ -69,7 +67,7 @@ itemToCraft = 0;
             <string>/// check for crafting
 if(instance_exists(GUI))
 {
-    if(currentCraftSlot == totalCraftingSlots)
+    if(array_length_1d(craftSlot) == totalCraftingSlots)
     {
         GUI.craftingOk = true;
     }

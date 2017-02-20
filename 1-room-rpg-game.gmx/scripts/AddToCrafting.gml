@@ -1,5 +1,6 @@
 /// AddToCrafting(sprite_index)
-var spriteIndex = argument0;
+var object = argument0;
+var slot = argument1;
 
 var picked = false;
 
@@ -7,11 +8,13 @@ if(instance_exists(Inventory))
 {
     with(Inventory)
     {
-        if(craftSlot[currentCraftSlot] == noone)
+        if(array_length_1d(craftSlot) < totalCraftingSlots)
         {
-            craftSlot[currentCraftSlot] = spriteIndex;
-            picked = true;
-            currentCraftSlot++;
+            if(craftSlot[slot] == noone)
+            {
+                craftSlot[slot] = object;
+                picked = true;
+            }
         }
     }
 }

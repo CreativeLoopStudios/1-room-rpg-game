@@ -16,8 +16,11 @@ one_key = keyboard_check_pressed(ord('1'));
 // drop right hand button
 two_key = keyboard_check_pressed(ord('2'));
 
-// drop itens on crafting inventory
-q_key = keyboard_check_pressed(ord('Q'));
+// drop craft itens on the left
+three_key = keyboard_check_pressed(ord('3'));
+
+// drop craft itens on the right
+four_key = keyboard_check_pressed(ord('4'));
 
 // craft!!!
 c_key = keyboard_check_pressed(ord('C'));

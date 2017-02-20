@@ -83,9 +83,14 @@ if(two_key and rightHandWeapon)
 }
 
 // drop crafting itens
-if(q_key)
+if(three_key)
 {
     DropItem(0, ITEM_CRAFTING);
+}
+
+if(four_key)
+{
+    DropItem(1, ITEM_CRAFTING)
 }
 
 // craft item
