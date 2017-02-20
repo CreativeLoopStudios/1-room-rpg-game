@@ -27,6 +27,12 @@
       <sprite>sprites\sNails</sprite>
     </sprites>
     <sprites name="Player">
+      <sprites name="PlayerAttackHammer">
+        <sprite>sprites\sPlayerAttackHammerFront</sprite>
+        <sprite>sprites\sPlayerAttackHammerBack</sprite>
+        <sprite>sprites\sPlayerAttackHammerLeft</sprite>
+        <sprite>sprites\sPlayerAttackHammerRight</sprite>
+      </sprites>
       <sprites name="PlayerWithHammer">
         <sprite>sprites\sPlayerWithHammerFront</sprite>
         <sprite>sprites\sPlayerWithHammerBack</sprite>
@@ -84,6 +90,7 @@
       <script>scripts\InitialiseRoom.gml</script>
       <script>scripts\Move.gml</script>
       <script>scripts\IsInRange.gml</script>
+      <script>scripts\DirectionMoveBounce.gml</script>
     </scripts>
     <scripts name="Room">
       <script>scripts\AddPlank.gml</script>

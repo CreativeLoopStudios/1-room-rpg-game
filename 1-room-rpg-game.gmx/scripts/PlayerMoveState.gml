@@ -29,8 +29,11 @@ PlayerSetSprite();
 Move(hspd, vspd, Solid);
 
 // attack state
-if(space and rightHandWeapon and attackTimer == 0)
+if(space and rightHandWeapon)
 {
+    // reset animation
+    image_index = 0;
+    image_speed = 0.1;
     state = PlayerAttackState;
 }
 

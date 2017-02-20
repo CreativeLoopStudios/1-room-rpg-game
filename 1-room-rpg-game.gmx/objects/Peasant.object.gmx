@@ -29,6 +29,7 @@
 event_inherited();
 
 spd = 80 / room_speed;
+spdHit = 10;
 
 hspd = 0;
 vspd = 0;
@@ -36,6 +37,7 @@ vspd = 0;
 life = 10;
 
 hit = false;
+directionOfHigt = 0;
 
 state = PeasantChasingPlayerState;
 </string>
