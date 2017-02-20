@@ -101,8 +101,8 @@ if(instance_exists(GUI))
             <string>/// draw in crafting
 if(instance_exists(GUI))
 {
-    var xx = GUI.x + 30;
-    var yy = GUI.y + 32 + GUI.heightCraftingGUI;
+    var xx = GUI.x + (GUI.spacing * 2);
+    var yy = GUI.y + (GUI.spacing * 2);
     
     for(var i = 0; i &lt; totalCraftingSlots; i++)
     {
@@ -137,8 +137,8 @@ if(instance_exists(GUI))
             <string>/// draw in hand
 if(instance_exists(GUI))
 {
-    var xx = GUI.x + 30;
-    var yy = GUI.y + 32;
+    var xx = (GUI.spacing + 1) * 3;
+    var yy = GUI.y + (GUI.spacing * 2);
     
     for(var i = 0; i &lt; totalHandSlots; i++)
     {

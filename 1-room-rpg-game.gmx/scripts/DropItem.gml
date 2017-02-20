@@ -16,10 +16,12 @@ if(instance_exists(Inventory))
         if(slot == 0)
         {
             itemToDrop = leftHandItem;
+            leftHandItem = noone;
         }
         else if(slot == 1) // right hand
         {
             itemToDrop = rightHandWeapon;
+            rightHandWeapon = noone;
         }
     }
     else if(typeOfInventory == ITEM_CRAFTING and Inventory.craftSlot[slot] != noone)

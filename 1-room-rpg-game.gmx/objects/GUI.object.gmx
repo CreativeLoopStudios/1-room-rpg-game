@@ -26,11 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/// init variables
-widthCraftingGUI = sprite_get_width(sCraftingGUI) + 32;
-heightCraftingGUI = sprite_get_height(sCraftingGUI);
+spacing = 16;
+widthCraftingGUI = sprite_get_width(sCraftingGUI) + spacing;
+heightCraftingGUI = sprite_get_height(sCraftingGUI) + spacing;
+
+
 
 x = room_width - widthCraftingGUI;
-y = room_height - (heightCraftingGUI * 2) - 32;
+y = room_height - heightCraftingGUI;
 
 craftingOk = false;
 </string>
@@ -57,21 +60,15 @@ craftingOk = false;
             <kind>1</kind>
             <string>/// Draw Crafting GUI
 
-var currentY = y;
-
-draw_sprite_ext(sHandGUI, 0, x, currentY, 1, 1, 0, c_white, 1);
-
-var heightHandGUI = sprite_get_height(sHandGUI);
-
-currentY += heightCraftingGUI;
+draw_sprite_ext(sHandGUI, 0, spacing, y, 1, 1, 0, c_white, 1);
 
 if(craftingOk)
 {
-    draw_sprite_ext(sCraftingGUI, 1, x, currentY, 1, 1, 0, c_yellow, 1);
+    draw_sprite_ext(sCraftingGUI, 1, x, y, 1, 1, 0, c_yellow, 1);
 }
 else
 {
-    draw_sprite_ext(sCraftingGUI, 0, x, currentY, 1, 1, 0, c_white, 1);
+    draw_sprite_ext(sCraftingGUI, 0, x, y, 1, 1, 0, c_white, 1);
 }
 </string>
           </argument>

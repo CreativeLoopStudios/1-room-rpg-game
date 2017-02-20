@@ -1,5 +1,6 @@
 /// PickItemIfInRange()
-var itemInRange = IsItemInRange();
+var itemPicked = false;
+var itemInRange = IsInRange(10, Item);
 
 if(itemInRange && itemInRange.visible)
 {
@@ -9,6 +10,10 @@ if(itemInRange && itemInRange.visible)
     {
         itemPicked = AddToHand(itemInRange, 1);
         if(itemPicked) rightHandWeapon = itemInRange;
+    }
+	else if(object_is_ancestor(itemInRange.object_index, CraftedItem))
+    {
+        itemPicked = AddToHand(itemInRange, 0);
     }
     else
     {
@@ -23,3 +28,5 @@ if(itemInRange && itemInRange.visible)
         itemInRange.y = 0;
     }
 }
+
+return itemPicked;

@@ -16,10 +16,10 @@ one_key = keyboard_check_pressed(ord('1'));
 // drop right hand button
 two_key = keyboard_check_pressed(ord('2'));
 
-// drop craft itens on the left
+// drop left craft button
 three_key = keyboard_check_pressed(ord('3'));
 
-// drop craft itens on the right
+// drop right craft button
 four_key = keyboard_check_pressed(ord('4'));
 
 // craft!!!
