@@ -69,5 +69,5 @@ if(four_key)
 // craft item
 if(c_key)
 {
-    CraftItem();
+    state = PlayerCraftingState;
 }
