@@ -1,25 +1,20 @@
 /// PeasantHitState()
-
-if(hit)
+if(hit and instance_exists(Player))
 {
     hit = false;
     
     switch(directionOfHit)
     {
         case 0:
-            hspd = spdHit;
-            break;
         case 180:
-            hspd = -spdHit;
+            hspd = (sign(x - Player.x) * spdHit);
             break;
         case 90:
-            vspd = -spdHit;
-            break;
         case 270:
-            vspd = spdHit;
+            vspd = (sign(y - Player.y) * spdHit);
             break;
     }
     
-    DirectionMoveBounce(Solid);
+    Move(hspd, vspd, Solid);
     alarm[0] = 0.5 * room_speed;
 }
