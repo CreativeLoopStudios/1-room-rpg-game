@@ -6,15 +6,20 @@ if(hit and instance_exists(Player))
     switch(directionOfHit)
     {
         case 0:
+            hspd = spdHit;
+            break;
         case 180:
-            hspd = (sign(x - Player.x) * spdHit);
+            hspd = -spdHit;
             break;
         case 90:
+            vspd = -spdHit;
+            break;
         case 270:
-            vspd = (sign(y - Player.y) * spdHit);
+            vspd = spdHit;
             break;
     }
-    
-    Move(hspd, vspd, Solid);
     alarm[0] = 0.5 * room_speed;
 }
+
+//Move(hspd, vspd, Solid);
+DirectionMoveBounce(Solid);

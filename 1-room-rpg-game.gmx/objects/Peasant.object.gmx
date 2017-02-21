@@ -29,7 +29,7 @@
 event_inherited();
 
 spd = 80 / room_speed;
-spdHit = 5 / room_speed;
+spdHit = 80 / room_speed;
 
 hspd = 0;
 vspd = 0;

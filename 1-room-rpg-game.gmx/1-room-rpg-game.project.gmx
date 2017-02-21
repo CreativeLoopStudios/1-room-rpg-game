@@ -78,8 +78,8 @@
     <scripts name="Enemies">
       <script>scripts\PeasantChasingPlayerState.gml</script>
       <script>scripts\PeasantHitState.gml</script>
-      <script>scripts\PeasantSetSprite.gml</script>
       <script>scripts\PeasantAttackState.gml</script>
+      <script>scripts\PeasantSetSprite.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
