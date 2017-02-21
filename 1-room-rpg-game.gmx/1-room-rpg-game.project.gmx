@@ -39,6 +39,9 @@
         <sprite>sprites\sPlayerWithHammerLeft</sprite>
         <sprite>sprites\sPlayerWithHammerRight</sprite>
       </sprites>
+      <sprites name="PlayerCrafting">
+        <sprite>sprites\sPlayerCrafting</sprite>
+      </sprites>
       <sprite>sprites\sAttackDownHitbox</sprite>
       <sprite>sprites\sAttackLeftRightHitbox</sprite>
       <sprite>sprites\sAttackUpHitbox</sprite>
@@ -83,6 +86,7 @@
       <script>scripts\PlayerPerformAction.gml</script>
       <script>scripts\PlayerSetSprite.gml</script>
       <script>scripts\AddPlankToWindowIfPossible.gml</script>
+      <script>scripts\PlayerCraftingState.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetInput.gml</script>
