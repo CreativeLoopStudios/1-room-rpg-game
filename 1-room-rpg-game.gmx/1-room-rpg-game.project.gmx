@@ -15,6 +15,14 @@
         <sprite>sprites\sPeasantRight</sprite>
       </sprites>
     </sprites>
+    <sprites name="Frank">
+      <sprite>sprites\sFrankBody</sprite>
+      <sprite>sprites\sFrankLeftArm</sprite>
+      <sprite>sprites\sFrankHead</sprite>
+      <sprite>sprites\sFrankRightArm</sprite>
+      <sprite>sprites\sFrankLeftLeg</sprite>
+      <sprite>sprites\sFrankRightLeg</sprite>
+    </sprites>
     <sprites name="GUI">
       <sprite>sprites\sCraftingGUI</sprite>
       <sprite>sprites\sHandGUI</sprite>
@@ -83,6 +91,7 @@
       <script>scripts\PlayerPerformAction.gml</script>
       <script>scripts\PlayerSetSprite.gml</script>
       <script>scripts\AddPlankToWindowIfPossible.gml</script>
+      <script>scripts\AddFrankPartIfPossible.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\GetInput.gml</script>
@@ -95,6 +104,9 @@
     <scripts name="Room">
       <script>scripts\AddPlank.gml</script>
       <script>scripts\HitWindow.gml</script>
+    </scripts>
+    <scripts name="Frank">
+      <script>scripts\AddFrankPart.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -148,6 +160,15 @@
     </objects>
     <objects name="Wave">
       <object>objects\Wave</object>
+    </objects>
+    <objects name="Frank">
+      <object>objects\FrankBody</object>
+      <object>objects\FrankLeftLeg</object>
+      <object>objects\FrankRightLeg</object>
+      <object>objects\FrankLeftArm</object>
+      <object>objects\FrankRightArm</object>
+      <object>objects\FrankHead</object>
+      <object>objects\FrankPart</object>
     </objects>
   </objects>
   <rooms name="rooms">
