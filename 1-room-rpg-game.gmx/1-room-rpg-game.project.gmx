@@ -79,6 +79,7 @@
       <script>scripts\PeasantChasingPlayerState.gml</script>
       <script>scripts\PeasantHitState.gml</script>
       <script>scripts\PeasantSetSprite.gml</script>
+      <script>scripts\PeasantAttackState.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
@@ -106,6 +107,8 @@
       <script>scripts\Move.gml</script>
       <script>scripts\IsInRange.gml</script>
       <script>scripts\DirectionMoveBounce.gml</script>
+      <script>scripts\IsObjectInFourDirections.gml</script>
+      <script>scripts\GameEnds.gml</script>
     </scripts>
     <scripts name="Room">
       <script>scripts\AddPlank.gml</script>

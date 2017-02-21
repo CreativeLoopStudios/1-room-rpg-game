@@ -1,0 +1,2 @@
+/// GameEnds()
+game_restart();
