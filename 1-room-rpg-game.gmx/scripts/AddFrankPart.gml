@@ -19,7 +19,7 @@ switch(frankPart.object_index)
         }
         break;
     case FrankLeftLeg:
-        hasHead = true;
+        hasLeftLeg = true;
         plankAdded = true;
         with(frankPart) 
         {
@@ -29,7 +29,7 @@ switch(frankPart.object_index)
         }
         break;
     case FrankRightLeg:
-        hasHead = true;
+        hasRightLeg = true;
         plankAdded = true;
         with(frankPart) 
         {
@@ -39,7 +39,7 @@ switch(frankPart.object_index)
         }
         break;
     case FrankRightArm:
-        hasHead = true;
+        hasRithtArm = true;
         plankAdded = true;
         with(frankPart) 
         {
@@ -49,7 +49,7 @@ switch(frankPart.object_index)
         }
         break;
     case FrankLeftArm:
-        hasHead = true;
+        hasLeftArm = true;
         plankAdded = true;
         with(frankPart) 
         {

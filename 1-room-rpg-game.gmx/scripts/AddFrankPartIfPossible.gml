@@ -12,8 +12,10 @@ if(leftHandItem != noone && object_is_ancestor(leftHandItem.object_index, FrankP
         }
         
         if(frankPartAdded) {
-            handSlot[0] = noone;
             leftHandItem = noone;
+            with(Inventory) {
+                handSlot[0] = noone;
+            }
         }
     }
 }
