@@ -33,25 +33,9 @@ if(instance_exists(Inventory))
         }
     }
     
-    // calculate where to drop based on direction
-    switch(direction)
-    {
-        case 0:
-            targetX += 32;
-            break;
-        case 180:
-            targetX -= 32;
-            break;
-        case 90:
-            targetY -= 32;
-            break;
-        case 270:
-            targetY += 32;
-            break;
-    }
-    
     if(instance_exists(itemToDrop))
     {
+        targetY += 32;
         itemToDrop.x = targetX;
         itemToDrop.y = targetY;
         itemToDrop.visible = true;

@@ -1,4 +1,4 @@
-///IsItemInRange(ditance, obj)
+///IsItemInRange(distance, obj)
 
 var contsOfCollision = argument0;
 var objType = argument1;

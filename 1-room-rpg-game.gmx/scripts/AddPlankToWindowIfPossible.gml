@@ -1,11 +1,11 @@
 //AddPlankToWindowIfPossible()
 var plankAdded = false;
 
-if(leftHandItem != noone and leftHandItem.object_index == PlankWithNails)
+if(leftHandItem != noone && leftHandItem.object_index == PlankWithNails)
 {
-    var inRange = IsInRange(30, RoomItem);
+    var inRange = IsInRange(30, Window);
     
-    if(inRange != noone and inRange.object_index == Window)
+    if(inRange != noone)
     { 
         with(inRange) {
             plankAdded = AddPlank();

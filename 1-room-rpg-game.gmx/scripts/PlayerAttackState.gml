@@ -5,7 +5,7 @@
 var hitbox = noone;
 
 // create hitbox
-if(direction == 0 or direction == 180)
+if(direction == 0 || direction == 180)
 {
     hitbox = instance_create(x, y, AttackLeftRightHitbox);
     if(direction == 0)

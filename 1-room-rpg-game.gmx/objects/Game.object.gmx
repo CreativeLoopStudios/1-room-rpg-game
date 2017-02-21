@@ -66,11 +66,13 @@ if(global.debug and keyboard_check_pressed(ord('0')))
 {
     with(Window) 
     {
-        numberOfPlanksShow++;
-        if(numberOfPlanksShow &gt; MAX_PLANKS) {
+
+        if(numberOfPlanksShow == MAX_PLANKS) {
             numberOfPlanksShow = 0;
+            numberOfPlanks = numberOfPlanksShow;
+        } else {
+            AddPlank();
         }
-        numberOfPlanks = numberOfPlanksShow;
     }
 }
 

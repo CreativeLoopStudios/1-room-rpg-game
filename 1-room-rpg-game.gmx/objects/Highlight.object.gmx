@@ -62,8 +62,12 @@ if(instance_exists(Player)) {
             if(leftHandItem != noone)
             {
                 if(leftHandItem.object_index == PlankWithNails)
+                {   
+                    inRange = IsInRange(30, Window);
+                } 
+                else if(object_is_ancestor(leftHandItem.object_index, FrankPart))
                 {
-                    inRange = IsInRange(30, RoomItem);
+                    inRange = IsInRange(50, MonsterTable);
                 }
             }
         }

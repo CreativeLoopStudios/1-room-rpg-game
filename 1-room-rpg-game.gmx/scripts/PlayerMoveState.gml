@@ -1,7 +1,7 @@
 /// PlayerMoveState()
 
 // check if up or down key pressed
-if(up or down)
+if(up || down)
 {
     vspd += (down - up) * acc;
     
@@ -9,7 +9,7 @@ if(up or down)
     if (vspd < -spd) vspd = -spd;
 }
 
-if (right or left)
+if (right || left)
 {
     hspd += (right - left) * acc;
     
