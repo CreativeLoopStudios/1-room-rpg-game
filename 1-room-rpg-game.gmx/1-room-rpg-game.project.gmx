@@ -26,6 +26,8 @@
     <sprites name="GUI">
       <sprite>sprites\sCraftingGUI</sprite>
       <sprite>sprites\sHandGUI</sprite>
+      <sprite>sprites\sScientistHead</sprite>
+      <sprite>sprites\sLife</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\sHammer</sprite>
@@ -123,6 +125,8 @@
     </objects>
     <objects name="GUI">
       <object>objects\GUI</object>
+      <object>objects\PlayerLifeGUI</object>
+      <object>objects\FrankLifeGUI</object>
     </objects>
     <objects name="Items">
       <objects name="Weapons">
