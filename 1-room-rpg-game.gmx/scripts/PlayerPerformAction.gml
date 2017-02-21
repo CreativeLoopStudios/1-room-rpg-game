@@ -3,6 +3,3 @@
 if(!AddPlankToWindowIfPossible()) {
     PickItemIfInRange();
 }
-
-
-    

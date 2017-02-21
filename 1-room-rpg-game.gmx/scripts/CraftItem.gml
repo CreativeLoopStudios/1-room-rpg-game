@@ -7,7 +7,6 @@ if(instance_exists(GUI) and instance_exists(Inventory))
         {
             case CRAFT_PLANK_WITH_NAILS:
                 AddToHand(instance_create(0, 0, PlankWithNails), 0);
-                
                 CleanCraftInventory();
                 break;
         }

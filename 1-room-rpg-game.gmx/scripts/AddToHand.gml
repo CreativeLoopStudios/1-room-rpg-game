@@ -6,21 +6,22 @@ var picked = false;
 
 if(instance_exists(Inventory))
 {
+    DropItem(slot, ITEM_HAND);
     with(Inventory)
     {
-        if(handSlot[slot] == noone)
-        {
-            handSlot[slot] = item.object_index;
-            picked = true;
-        }
+        handSlot[slot] = item;
+        picked = true;
     }
 }
 
-if (picked) 
+if (picked)
 {
-    if(slot == 0) {
+    if(slot == 0)
+    {
         leftHandItem = item;
-    } else {
+    }
+    else
+    {
         rightHandWeapon = item;
     }
     

@@ -2,30 +2,36 @@
 // touching an enemy
 
 // Attack Hitbox
-// if you need to test when the animation of the attack are actually attacking
-/*if(image_index >= 1 and image_index <= 3)
-{
-}*/
-
 var hitbox = noone;
 
 // create hitbox
 if(direction == 0 or direction == 180)
 {
     hitbox = instance_create(x, y, AttackLeftRightHitbox);
+    if(direction == 0)
+    {
+        sprite_index = sPlayerAttackHammerRight;
+    }
+    else
+    {
+        sprite_index = sPlayerAttackHammerLeft;
+    }
 }
 else if(direction == 90)
 {
     hitbox = instance_create(x, y, AttackUpHitbox);
+    sprite_index = sPlayerAttackHammerBack;
 }
 else if(direction == 270)
 {
     hitbox = instance_create(x, y, AttackDownHitbox);
+    sprite_index = sPlayerAttackHammerFront;
 }
 
 if(hitbox)
 {
     var weaponDamage = rightHandWeapon.damage;
+    var playerDirection = direction;
     with(hitbox)
     {
         if(other.direction == 180) image_xscale = -1;
@@ -36,18 +42,11 @@ if(hitbox)
         {
             if(state == PeasantChasingPlayerState)
             {
+                directionOfHit = playerDirection;
                 life -= weaponDamage;
                 hit = true;
                 state = PeasantHitState;
             }
         }
     }
-}
-
-attackTimer++;
-
-if(attackTimer == timeOfAttack)
-{
-    attackTimer = 0;
-    state = PlayerMoveState;
 }

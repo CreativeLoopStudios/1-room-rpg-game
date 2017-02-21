@@ -29,8 +29,11 @@ PlayerSetSprite();
 Move(hspd, vspd, Solid);
 
 // attack state
-if(space and rightHandWeapon and attackTimer == 0)
+if(space and rightHandWeapon)
 {
+    // reset animation
+    image_index = 0;
+    image_speed = 0.1;
     state = PlayerAttackState;
 }
 
@@ -58,8 +61,9 @@ if(three_key)
     DropItem(0, ITEM_CRAFTING);
 }
 
-if(four_key) {
-    DropItem(1, ITEM_CRAFTING);
+if(four_key)
+{
+    DropItem(1, ITEM_CRAFTING)
 }
 
 // craft item

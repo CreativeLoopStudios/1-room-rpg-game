@@ -59,9 +59,12 @@ if(instance_exists(Player)) {
         inRange = IsInRange(10, Item);
         if(inRange == noone)
         {
-            if(leftHandItem != noone &amp;&amp; leftHandItem.object_index == PlankWithNails) 
+            if(leftHandItem != noone)
             {
-                inRange = IsInRange(30, RoomItem);
+                if(leftHandItem.object_index == PlankWithNails)
+                {
+                    inRange = IsInRange(30, RoomItem);
+                }
             }
         }
     }

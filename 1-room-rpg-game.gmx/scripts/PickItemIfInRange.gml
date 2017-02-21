@@ -2,8 +2,10 @@
 var itemPicked = false;
 var itemInRange = IsInRange(10, Item);
 
-if(itemInRange && itemInRange.visible)
+if(itemInRange and itemInRange.visible)
 {
+    var itemPicked = noone;
+    
     if(object_is_ancestor(itemInRange.object_index, Weapon))
     {
         itemPicked = AddToHand(itemInRange, 1);
@@ -14,7 +16,32 @@ if(itemInRange && itemInRange.visible)
     }
     else
     {
-        itemPicked = AddToCrafting(itemInRange);
+        var emptySlot = noone;
+        
+        with(Inventory)
+        {
+            for(var i = 0; i < totalCraftingSlots; i++)
+            {
+                if(craftSlot[i] == noone)
+                {
+                    emptySlot = i;
+                    break;
+                }
+            }
+        }
+    
+        if(emptySlot != noone)
+        {
+            itemPicked = AddToCrafting(itemInRange, emptySlot);
+        }
+    }
+    
+    if(itemPicked)
+    {
+        
+        itemInRange.visible = false;
+        itemInRange.x = 0;
+        itemInRange.y = 0;
     }
 }
 

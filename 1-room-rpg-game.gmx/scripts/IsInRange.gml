@@ -24,4 +24,4 @@ else if(direction == 270)
     itemInRange = collision_rectangle(x - middleWidthPlayer, y + middleHeightPlayer, x + middleWidthPlayer, y + middleHeightPlayer + contsOfCollision, objType, false, true);
 }
 
-return itemInRange
+return itemInRange;

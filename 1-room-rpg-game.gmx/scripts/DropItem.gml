@@ -8,8 +8,8 @@ if(instance_exists(Inventory))
     var targetY = y;
     
     var itemToDrop = noone;
-        
-    if(typeOfInventory == ITEM_HAND)
+    
+    if(typeOfInventory == ITEM_HAND and Inventory.handSlot[slot] != noone)
     {
         Inventory.handSlot[slot] = noone;
         // left hand
@@ -24,16 +24,12 @@ if(instance_exists(Inventory))
             rightHandWeapon = noone;
         }
     }
-    else if(typeOfInventory == ITEM_CRAFTING)
+    else if(typeOfInventory == ITEM_CRAFTING and Inventory.craftSlot[slot] != noone)
     {
         with(Inventory)
         {
-            if(currentCraftSlot > slot)
-            {
-                itemToDrop = craftSlot[currentCraftSlot - 1];
-                craftSlot[currentCraftSlot - 1] = noone;
-                currentCraftSlot -= 1;
-            }
+            itemToDrop = craftSlot[slot];
+            craftSlot[slot] = noone;
         }
     }
     
