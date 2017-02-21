@@ -69,5 +69,11 @@ if(four_key)
 // craft item
 if(c_key)
 {
-    state = PlayerCraftingState;
+    if(instance_exists(GUI))
+    {
+        if(GUI.craftingOk)
+        {
+            state = PlayerCraftingState;
+        }
+    }
 }

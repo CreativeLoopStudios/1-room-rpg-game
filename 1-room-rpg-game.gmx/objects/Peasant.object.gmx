@@ -34,7 +34,7 @@ spdHit = 5 / room_speed;
 hspd = 0;
 vspd = 0;
 
-life = 10;
+life = 2;
 
 hit = false;
 directionOfHit = 0;

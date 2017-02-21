@@ -70,6 +70,7 @@ state = PlayerMoveState;
             <kind>1</kind>
             <string>/// crafting state
 CraftItem();
+crafting = true;
 
 state = PlayerMoveState;
 </string>

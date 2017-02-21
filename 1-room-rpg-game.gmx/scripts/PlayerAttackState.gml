@@ -40,7 +40,8 @@ if(hitbox)
         var peasantHit = instance_place(x, y, Peasant);
         with(peasantHit)
         {
-            if(state == PeasantChasingPlayerState)
+            if(state == PeasantChasingPlayerState
+                or state == PeasantAttackState)
             {
                 directionOfHit = playerDirection;
                 life -= weaponDamage;
