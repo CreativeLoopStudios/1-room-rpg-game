@@ -65,7 +65,7 @@ itemToCraft = 0;
           <argument>
             <kind>1</kind>
             <string>/// check for crafting
-if(instance_exists(GUI))
+/*if(instance_exists(GUI))
 {
     if(CountObjectsOnArray(craftSlot) == totalCraftingSlots)
     {
@@ -75,7 +75,7 @@ if(instance_exists(GUI))
     {
         GUI.craftingOk = false;
     }
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -137,7 +137,7 @@ if(instance_exists(GUI))
             <string>/// draw crafting result
 if(instance_exists(GUI))
 {
-    if(GUI.craftingOk and craftSlot[0] != noone and craftSlot[1] != noone)
+    if(craftSlot[0] != noone and craftSlot[1] != noone)
     {
         var xx = GUI.x + (GUI.spacing * 1) + (totalCraftingSlots * spaceBetweenItens) + 14;
         var yy = GUI.y + (GUI.spacing * 2);
@@ -149,8 +149,17 @@ if(instance_exists(GUI))
             or (objIndexLeft == Nails and objIndexRight == Plank))
         {
             itemToCraft = CRAFT_PLANK_WITH_NAILS;
+            GUI.craftingOk = true;
             draw_sprite_ext(sPlankWithNails, 0, xx, yy, 1, 1, 0, c_white, 1);
         }
+        else
+        {
+            GUI.craftingOk = false;
+        }
+    }
+    else
+    {
+        GUI.craftingOk = false;
     }
 }
 </string>
