@@ -1,25 +1,29 @@
 /// PeasantHitState()
-if(hit and instance_exists(Player))
+if(hit)
 {
-    hit = false;
-    
     switch(directionOfHit)
     {
         case 0:
-            hspd = spdHit;
+            hspd = slideSpd;
             break;
         case 180:
-            hspd = -spdHit;
+            hspd = -slideSpd;
             break;
         case 90:
-            vspd = -spdHit;
+            vspd = -slideSpd;
             break;
         case 270:
-            vspd = spdHit;
+            vspd = slideSpd;
             break;
     }
-    alarm[0] = 0.5 * room_speed;
+    
+    Move(hspd, vspd, Solid);
+    //DirectionMoveBounce(Solid);
+    slideSpd -= .25;
 }
 
-//Move(hspd, vspd, Solid);
-DirectionMoveBounce(Solid);
+if(slideSpd <= 0)
+{
+    hit = false;
+    state = PeasantChasingPlayerState;
+}
