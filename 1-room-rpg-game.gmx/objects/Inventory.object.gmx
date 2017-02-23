@@ -47,40 +47,6 @@ itemToCraft = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// check for crafting
-/*if(instance_exists(GUI))
-{
-    if(CountObjectsOnArray(craftSlot) == totalCraftingSlots)
-    {
-        GUI.craftingOk = true;
-    }
-    else
-    {
-        GUI.craftingOk = false;
-    }
-}*/
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -151,6 +117,13 @@ if(instance_exists(GUI))
             itemToCraft = CRAFT_PLANK_WITH_NAILS;
             GUI.craftingOk = true;
             draw_sprite_ext(sPlankWithNails, 0, xx, yy, 1, 1, 0, c_white, 1);
+        }
+        else if((objIndexLeft == ToothedStrips and objIndexRight == Lever)
+                or (objIndexLeft == Lever and objIndexRight == ToothedStrips))
+        {
+            itemToCraft = CRAFT_BEAR_TRAP;
+            GUI.craftingOk = true;
+            draw_sprite_ext(sBearTrap, 0, xx, yy, 1, 1, 0, c_white, 1);
         }
         else
         {

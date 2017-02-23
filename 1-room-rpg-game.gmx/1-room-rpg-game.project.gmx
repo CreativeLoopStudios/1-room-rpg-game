@@ -35,6 +35,8 @@
       <sprite>sprites\sPlank</sprite>
       <sprite>sprites\sPlankWithNails</sprite>
       <sprite>sprites\sNails</sprite>
+      <sprite>sprites\sToothedStrips</sprite>
+      <sprite>sprites\sLever</sprite>
     </sprites>
     <sprites name="Player">
       <sprites name="PlayerAttackHammer">
@@ -140,9 +142,12 @@
       <objects name="Craft">
         <object>objects\Plank</object>
         <object>objects\Nails</object>
+        <object>objects\ToothedStrips</object>
+        <object>objects\Lever</object>
       </objects>
       <objects name="Crafted">
         <object>objects\PlankWithNails</object>
+        <object>objects\BearTrap</object>
         <object>objects\CraftedItem</object>
       </objects>
       <objects name="Util">
@@ -160,9 +165,6 @@
       <object>objects\Window</object>
       <object>objects\MonsterTable</object>
       <object>objects\RoomItem</object>
-    </objects>
-    <objects name="Traps">
-      <object>objects\BearTrap</object>
     </objects>
     <objects name="Util">
       <object>objects\Game</object>
@@ -185,13 +187,14 @@
   <rooms name="rooms">
     <room>rooms\rOneRoom</room>
   </rooms>
-  <constants number="6">
+  <constants number="7">
     <constant name="MAX_PLANKS">3</constant>
     <constant name="ITEM_HAND">1</constant>
     <constant name="ITEM_CRAFTING">2</constant>
     <constant name="CELL_WIDTH">32</constant>
     <constant name="CELL_HEIGHT">32</constant>
     <constant name="CRAFT_PLANK_WITH_NAILS">10</constant>
+    <constant name="CRAFT_BEAR_TRAP">11</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
