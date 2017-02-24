@@ -81,18 +81,20 @@ if(lifes &lt;= 0)
           <argument>
             <kind>1</kind>
             <string>/// draw life
-draw_sprite(sFrankHead, 0, xDraw, yDraw + 16);
+draw_sprite(sFrankGUI, 0, xDraw - sprite_get_width(sFrankGUI), yDraw);
 
-xDraw -= sprite_get_width(sScientistHead) + 16;
+xDraw -= 99;
+yDraw += 16
 
 for(var i = 0; i &lt; lifes; i++)
 {
-    draw_sprite(sLife, 0, xDraw, yDraw);
+    draw_sprite(sHearth, 0, xDraw, yDraw);
     
-    xDraw -= sprite_get_width(sLife) + 16;
+    xDraw -= sprite_get_width(sHearth) + 1;
 }
 
 xDraw = room_width - 32;
+yDraw = 16;
 </string>
           </argument>
         </arguments>

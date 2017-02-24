@@ -26,8 +26,9 @@
     <sprites name="GUI">
       <sprite>sprites\sCraftingGUI</sprite>
       <sprite>sprites\sHandGUI</sprite>
-      <sprite>sprites\sScientistHead</sprite>
-      <sprite>sprites\sLife</sprite>
+      <sprite>sprites\sLifeGUI</sprite>
+      <sprite>sprites\sFrankGUI</sprite>
+      <sprite>sprites\sHearth</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\sHammer</sprite>
