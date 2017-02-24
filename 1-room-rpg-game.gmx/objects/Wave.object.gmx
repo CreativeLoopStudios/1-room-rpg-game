@@ -98,16 +98,16 @@ if(waveOn) {
     
     if(windowObjec.image_angle == 0) {
         yAdjust += ajustCenterOfEnemy;
-        sprite = sPeasantFront;
+        sprite = sVillager1Front;
     } else if (windowObjec.image_angle == 90) {
         xAdjust += ajustCenterOfEnemy;
-        sprite = sPeasantRight;
+        sprite = sVillager1Right;
     } else if (windowObjec.image_angle == 180) {
         yAdjust -= 1.5 * ajustCenterOfEnemy; //correction position
-        sprite = sPeasantBack;
+        sprite = sVillager1Back;
     } else if (windowObjec.image_angle == 270) {
         xAdjust -= ajustCenterOfEnemy;
-        sprite = sPeasantLeft;
+        sprite = sVillager1Left;
     }
     
     with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))

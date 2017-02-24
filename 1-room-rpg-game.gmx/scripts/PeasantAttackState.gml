@@ -5,19 +5,19 @@ if(instance_exists(Player))
     
     if(directionOfPlayer >= 328 or directionOfPlayer <= 32)
     {
-        sprite_index = sPeasantRight;
+        sprite_index = sVillager1Right;
     }
     else if(directionOfPlayer >= 148 and directionOfPlayer <= 212)
     {
-        sprite_index = sPeasantLeft;
+        sprite_index = sVillager1Left;
     }
     else if(directionOfPlayer >= 58 and directionOfPlayer <= 122)
     {
-        sprite_index = sPeasantBack;
+        sprite_index = sVillager1Back;
     }
     else if(directionOfPlayer >= 238 and directionOfPlayer <= 302)
     {
-        sprite_index = sPeasantFront;
+        sprite_index = sVillager1Front;
     }
     
     // damage the player

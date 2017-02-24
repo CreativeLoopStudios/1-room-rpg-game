@@ -6,19 +6,19 @@ var xBigger = abs(xDiff) - abs(yDiff);
 
 if(xDiff > 0 && xBigger)
 {
-    sprite_index = sPeasantRight;
+    sprite_index = sVillager1Right;
 }
 else if(xDiff < 0 && xBigger)
 {
-    sprite_index = sPeasantLeft;
+    sprite_index = sVillager1Left;
 }
 else if(yDiff > 0 && !xBigger)
 {
-    sprite_index = sPeasantFront;
+    sprite_index = sVillager1Front;
 }
 else if(yDiff < 0 && !xBigger)
 {
-    sprite_index = sPeasantBack;
+    sprite_index = sVillager1Back;
 }
 
 
