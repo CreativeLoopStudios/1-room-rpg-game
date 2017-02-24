@@ -2,7 +2,7 @@
 <sprite>
   <type>0</type>
   <xorig>29</xorig>
-  <yorigin>43</yorigin>
+  <yorigin>45</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
@@ -10,7 +10,7 @@
   <bbox_left>0</bbox_left>
   <bbox_right>57</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>86</bbox_bottom>
+  <bbox_bottom>89</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,10 +18,11 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>58</width>
-  <height>87</height>
+  <height>90</height>
   <frames>
-    <frame index="0">images\sPeasantLeft_0.png</frame>
-    <frame index="1">images\sPeasantLeft_1.png</frame>
-    <frame index="2">images\sPeasantLeft_2.png</frame>
+    <frame index="0">images\sVillager1Front_0.png</frame>
+    <frame index="1">images\sVillager1Front_1.png</frame>
+    <frame index="2">images\sVillager1Front_2.png</frame>
+    <frame index="3">images\sVillager1Front_3.png</frame>
   </frames>
 </sprite>

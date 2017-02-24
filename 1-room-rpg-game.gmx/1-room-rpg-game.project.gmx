@@ -8,11 +8,23 @@
   <sprites name="sprites">
     <sprites name="Enemies">
       <sprite>sprites\sEnemyMask</sprite>
-      <sprites name="Peasant">
-        <sprite>sprites\sPeasantBack</sprite>
-        <sprite>sprites\sPeasantLeft</sprite>
-        <sprite>sprites\sPeasantFront</sprite>
-        <sprite>sprites\sPeasantRight</sprite>
+      <sprites name="Villager1">
+        <sprite>sprites\sVillager1Back</sprite>
+        <sprite>sprites\sVillager1Left</sprite>
+        <sprite>sprites\sVillager1Front</sprite>
+        <sprite>sprites\sVillager1Right</sprite>
+      </sprites>
+      <sprites name="Villager2">
+        <sprite>sprites\sVillager2Left</sprite>
+        <sprite>sprites\sVillager2Front</sprite>
+      </sprites>
+      <sprites name="Villager1Fem">
+        <sprite>sprites\sVillager1FemLeft</sprite>
+        <sprite>sprites\sVillager1FemFront</sprite>
+      </sprites>
+      <sprites name="Villager2Fem">
+        <sprite>sprites\sVillager2FemLeft</sprite>
+        <sprite>sprites\sVillager2FemFront</sprite>
       </sprites>
     </sprites>
     <sprites name="Frank">
@@ -68,10 +80,10 @@
       <sprite>sprites\sWindow</sprite>
       <sprite>sprites\sMonsterTable</sprite>
     </sprites>
-    <sprite>sprites\sSolid</sprite>
     <sprites name="Traps">
       <sprite>sprites\sBearTrap</sprite>
     </sprites>
+    <sprite>sprites\sSolid</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgHouse</background>
