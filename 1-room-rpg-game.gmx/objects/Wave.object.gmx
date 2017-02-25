@@ -95,23 +95,25 @@ if(waveOn) {
     var yAdjust = 0;
     var timeBetweenMonsters = 0;
     var sprite = noone;
+    var typeOfEnemy = choose("sVillager1","sVillager2","sVillager1Fem","sVillager2Fem");
     
     if(windowObjec.image_angle == 0) {
         yAdjust += ajustCenterOfEnemy;
-        sprite = sVillager1Front;
+        sprite = asset_get_index(typeOfEnemy + "Front");
     } else if (windowObjec.image_angle == 90) {
         xAdjust += ajustCenterOfEnemy;
-        sprite = sVillager1Right;
+        sprite = asset_get_index(typeOfEnemy + "Right");
     } else if (windowObjec.image_angle == 180) {
         yAdjust -= 1.5 * ajustCenterOfEnemy; //correction position
-        sprite = sVillager1Back;
+        sprite = asset_get_index(typeOfEnemy + "Back");
     } else if (windowObjec.image_angle == 270) {
         xAdjust -= ajustCenterOfEnemy;
-        sprite = sVillager1Left;
+        sprite = asset_get_index(typeOfEnemy + "Left");
     }
     
     with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))
     {
+        type = typeOfEnemy;
         sprite_index = sprite;
         image_index = 1;
         image_speed = 0;

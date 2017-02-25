@@ -6,19 +6,19 @@ var xBigger = abs(xDiff) - abs(yDiff);
 
 if(xDiff > 0 && xBigger)
 {
-    sprite_index = sVillager1Right;
+    sprite_index = asset_get_index(type + "Right");
 }
 else if(xDiff < 0 && xBigger)
 {
-    sprite_index = sVillager1Left;
+    sprite_index = asset_get_index(type + "Left");
 }
 else if(yDiff > 0 && !xBigger)
 {
-    sprite_index = sVillager1Front;
+    sprite_index = asset_get_index(type + "Front");
 }
 else if(yDiff < 0 && !xBigger)
 {
-    sprite_index = sVillager1Back;
+    sprite_index = asset_get_index(type + "Back");
 }
 
 

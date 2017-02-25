@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///Init Variables
+
 //hit Window
 hitDorTime = 2 * room_speed;
 alarm[11] = hitDorTime;
@@ -35,6 +36,9 @@ entrance = noone;
 canEnter = false;
 spawnX = 0;
 spawnY = 0;
+
+//type
+type = noone;
 
 // animation speed
 animSpd = .1;
