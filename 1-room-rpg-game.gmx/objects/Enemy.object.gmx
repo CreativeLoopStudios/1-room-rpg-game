@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>
 //hit Window
-hitDorTime = 3 * room_speed;
+hitDorTime = 2 * room_speed;
 alarm[11] = hitDorTime;
 
 //spawn
@@ -38,6 +38,40 @@ spawnY = 0;
 
 // animation speed
 animSpd = .1;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Drop item
+
+var dropChance = 60;
+var itemtTODrop = choose(Plank,Nails,Plank,Nails,Potion);
+var chance = random_range(1,101)
+
+if(chance &lt;= dropChance)
+{
+    instance_create(x,y,itemtTODrop);
+}
+
 </string>
           </argument>
         </arguments>
@@ -63,48 +97,30 @@ animSpd = .1;
             <string>///Hit Window
 if(instance_exists(entrance) &amp;&amp; !canEnter)
 { 
-    with(entrance) {
-        if(!isOpen)
-        {
+    
+    if(!entrance.isOpen)
+    {
+        with(entrance) {
             HitWindow();
+        }
+        alarm[11] = hitDorTime;
+    }
+    else 
+    {
+        //if not spawn
+        if(!place_meeting(spawnX, spawnY, Solid))
+        {
+            visible = true;
+            canEnter = true;
+            x = spawnX;
+            y = spawnY;
+        }
+        else
+        {
             other.alarm[11] = other.hitDorTime;
         }
     }
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///if not spawn
-if(instance_exists(entrance))
-{ 
-    if(!canEnter &amp;&amp; entrance.isOpen &amp;&amp; !place_meeting(spawnX, spawnY, Solid))
-    {
-        visible = true;
-        canEnter = true;
-        x = spawnX;
-        y = spawnY;
-    }
-}
-
 </string>
           </argument>
         </arguments>

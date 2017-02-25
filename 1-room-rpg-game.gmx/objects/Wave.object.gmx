@@ -30,8 +30,7 @@
 waveNumber = 0
 timeBeforeFirstWave = 2 * room_speed; //1 sec delay for first char
 timeBetweenWave = 20 * room_speed;
-timeOfWave = 60 * room_speed;
-timeBetweenMonsters = 5 * room_speed;
+timeOfWave = 120 * room_speed;
 
 waveOn = false;
 alarm[0] = timeBeforeFirstWave;
@@ -90,10 +89,11 @@ alarm[0] = timeBetweenWave;
             <kind>1</kind>
             <string>///New Monster
 if(waveOn) {
-    var windowNumber = random_range(1,numerOfWindows);
+    var windowNumber = random_range(1,numerOfWindows + 1);
     var windowObjec = instance_find(Window,windowNumber);
     var xAdjust = 0;
     var yAdjust = 0;
+    var timeBetweenMonsters = 0;
     var sprite = noone;
     
     if(windowObjec.image_angle == 0) {
@@ -131,7 +131,11 @@ if(waveOn) {
         }
     }
     
-    alarm[1] = timeBetweenMonsters;
+    if(waveNumber = 1) timeBetweenMonsters = 5 * room_speed;
+    else if(waveNumber = 2) timeBetweenMonsters = 3 * room_speed;
+    else if(waveNumber = 3) timeBetweenMonsters = 1 * room_speed;
+            
+    alarm[1] =  timeBetweenMonsters;
 }
 </string>
           </argument>
@@ -160,6 +164,7 @@ if(!waveOn) {
     alarm[1] = 1 * room_speed;
     alarm[2] = timeOfWave;
     waveOn = true;
+    waveNumber++;
 }
 </string>
           </argument>
