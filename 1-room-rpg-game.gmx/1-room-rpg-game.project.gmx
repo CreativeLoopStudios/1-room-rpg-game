@@ -96,6 +96,7 @@
       <script>scripts\PeasantHitState.gml</script>
       <script>scripts\PeasantAttackState.gml</script>
       <script>scripts\PeasantSetSprite.gml</script>
+      <script>scripts\DoDamageToPlayer.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>
@@ -126,6 +127,8 @@
       <script>scripts\DirectionMoveBounce.gml</script>
       <script>scripts\IsObjectInFourDirections.gml</script>
       <script>scripts\GameEnds.gml</script>
+      <script>scripts\CreatePauseSurface.gml</script>
+      <script>scripts\ReleasePauseSurface.gml</script>
     </scripts>
     <scripts name="Room">
       <script>scripts\AddPlank.gml</script>
@@ -138,6 +141,9 @@
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shHighlight.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\fPause</font>
+  </fonts>
   <objects name="objects">
     <objects name="Enemies">
       <object>objects\Peasant</object>
@@ -186,6 +192,7 @@
       <object>objects\Game</object>
       <object>objects\Solid</object>
       <object>objects\Highlight</object>
+      <object>objects\Pause</object>
     </objects>
     <objects name="Wave">
       <object>objects\Wave</object>

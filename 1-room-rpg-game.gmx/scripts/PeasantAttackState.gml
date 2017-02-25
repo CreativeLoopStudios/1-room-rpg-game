@@ -23,6 +23,7 @@ if(instance_exists(Player))
     // damage the player
     if(not(canDoDamage))
     {
+        DoDamageToPlayer();
         alarm[0] = 2 * room_speed;
         canDoDamage = true;
     }
