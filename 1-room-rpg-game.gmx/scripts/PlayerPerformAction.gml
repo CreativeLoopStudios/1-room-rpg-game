@@ -1,7 +1,12 @@
 //PlayerPerformAction
 
-if(!AddPlankToWindowIfPossible()) {
-    if(!AddFrankPartIfPossible()) { 
-        PickItemIfInRange();
+if(!AddPlankToWindowIfPossible())
+{
+    if(!AddFrankPartIfPossible())
+    {
+        if(!UsePotionIfPossible())
+        {
+            PickItemIfInRange();
+        }
     }
 }

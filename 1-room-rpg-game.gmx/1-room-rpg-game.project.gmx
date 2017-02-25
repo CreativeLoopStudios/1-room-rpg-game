@@ -50,6 +50,7 @@
       <sprite>sprites\sNails</sprite>
       <sprite>sprites\sToothedStrips</sprite>
       <sprite>sprites\sLever</sprite>
+      <sprite>sprites\sPotion</sprite>
     </sprites>
     <sprites name="Player">
       <sprites name="PlayerAttackHammer">
@@ -113,6 +114,7 @@
       <script>scripts\PlayerSetSprite.gml</script>
       <script>scripts\AddPlankToWindowIfPossible.gml</script>
       <script>scripts\AddFrankPartIfPossible.gml</script>
+      <script>scripts\UsePotionIfPossible.gml</script>
       <script>scripts\PlayerCraftingState.gml</script>
     </scripts>
     <scripts name="Util">
@@ -161,6 +163,7 @@
       <objects name="Crafted">
         <object>objects\PlankWithNails</object>
         <object>objects\BearTrap</object>
+        <object>objects\Potion</object>
         <object>objects\CraftedItem</object>
       </objects>
       <objects name="Util">
