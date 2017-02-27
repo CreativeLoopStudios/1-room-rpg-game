@@ -31,6 +31,7 @@ if(chaseObject == Player)
     with(PlayerLifeGUI)
     {
         lifes -= 1;
+        audio_play_sound(sndHitOnPlayer, 1, false);
     }
 }
 else if(chaseObject == MonsterTable)
@@ -38,6 +39,7 @@ else if(chaseObject == MonsterTable)
     with(FrankLifeGUI)
     {
         lifes -= 1;
+        audio_play_sound(sndHitOnPlayer, 1, false);
     }
 }
 

@@ -39,5 +39,6 @@ if(instance_exists(Inventory))
         itemToDrop.x = targetX;
         itemToDrop.y = targetY;
         itemToDrop.visible = true;
+        audio_play_sound(sndGetItem, 1, false);
     }
 }

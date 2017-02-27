@@ -4,7 +4,7 @@ if(instance_exists(chaseObject))
     
     //PeasantSetSprite();
     if(canDoDamage) {
-        DoDamageToChaseObject();   
+        DoDamageToChaseObject();
     }
 
     if(

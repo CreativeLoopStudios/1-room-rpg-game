@@ -38,7 +38,7 @@ if(itemInRange and itemInRange.visible)
     
     if(itemPicked)
     {
-        
+        audio_play_sound(sndGetItem, 1, false);
         itemInRange.visible = false;
         itemInRange.x = 0;
         itemInRange.y = 0;

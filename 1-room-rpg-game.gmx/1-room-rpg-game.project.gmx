@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndGetItem</sound>
+    <sound>sound\sndHit</sound>
+    <sound>sound\sndHitOnPlayer</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Enemies">
       <sprite>sprites\sEnemyMask</sprite>

@@ -46,6 +46,7 @@ if(hitbox)
                 directionOfHit = playerDirection;
                 life -= weaponDamage;
                 hit = true;
+                audio_play_sound(sndHit, 1, false);
                 state = PeasantHitState;
                 chaseObject = Player;
             }
