@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="Window" x="232" y="144" name="inst_CA8781AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="MonsterTable" x="613" y="360" name="inst_FDAAAD44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Window" x="672" y="144" name="inst_DBA477B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Window" x="128" y="264" name="inst_80BCA804" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="Window" x="128" y="504" name="inst_9943AF72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -64,14 +65,11 @@
     <instance objName="Solid" x="112" y="368" name="inst_9E6FBDFE" locked="0" code="" scaleX="1" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="Solid" x="480" y="592" name="inst_6B787C48" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Hammer" x="464" y="416" name="inst_DABD13E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Solid" x="648" y="344" name="inst_F09EDE57" locked="0" code="" scaleX="5.71875" scaleY="3.125" colour="4294967295" rotation="0"/>
-    <instance objName="Solid" x="648" y="408" name="inst_AA2D2B03" locked="0" code="" scaleX="5.59375" scaleY="0.90625" colour="4294967295" rotation="0"/>
-    <instance objName="Solid" x="544" y="328" name="inst_E60AA060" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="Solid" x="544" y="384" name="inst_CD9DB2B1" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="Solid" x="752" y="384" name="inst_0A20F725" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="Solid" x="752" y="328" name="inst_C418E496" locked="0" code="" scaleX="0.75" scaleY="1.25" colour="4294967295" rotation="0"/>
-    <instance objName="MonsterTable" x="648" y="360" name="inst_FDAAAD44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FrankBody" x="650" y="346" name="inst_647FA941" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Solid" x="613" y="349" name="inst_F09EDE57" locked="0" code="" scaleX="5.71875" scaleY="3.125" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="613" y="406" name="inst_AA2D2B03" locked="0" code="" scaleX="5.40000009536743" scaleY="0.90625" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="513" y="358" name="inst_E60AA060" locked="0" code="" scaleX="0.75" scaleY="3.20000004768372" colour="4294967295" rotation="0"/>
+    <instance objName="Solid" x="714" y="358" name="inst_C418E496" locked="0" code="" scaleX="0.75" scaleY="3.20000004768372" colour="4294967295" rotation="0"/>
+    <instance objName="FrankBody" x="615" y="346" name="inst_647FA941" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="Potion" x="424" y="416" name="inst_F7280F82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Plank" x="160" y="416" name="inst_ED78DDA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Plank" x="160" y="288" name="inst_51EE743D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -52,14 +52,18 @@
           <argument>
             <kind>1</kind>
             <string>/// drawing text
+var text1 = "You are the scientist that needs to protect his creature";
+var text2 = "Use E to get items and the numbers keys to drop items";
+var pressAnyKey = "Press any key to continue";
+
 draw_set_color(c_white);
 draw_set_font(fPause);
-var text1 = "You are the scientist that needs to protect his creature";
-draw_text(room_width / 2 - (string_width(text1) / 2), room_height / 2 - (string_height(text1) / 2), text1);
-var text2 = "Use E to get items and the numbers keys to drop items";
-draw_text(room_width / 2 - (string_width(text2) / 2), room_height / 2 + ((string_height(text2) / 2) * 2), text2);
 
-var pressAnyKey = "Press any key to continue";
+draw_text(room_width / 2 - (string_width(text1) / 2), room_height / 2 - string_height(text1) * 1.5 , text1);
+
+draw_text(room_width / 2 - (string_width(text2) / 2), room_height / 2 , text2);
+
+
 draw_text(room_width / 2 - (string_width(pressAnyKey) / 2), room_height - 100, pressAnyKey);
 </string>
           </argument>

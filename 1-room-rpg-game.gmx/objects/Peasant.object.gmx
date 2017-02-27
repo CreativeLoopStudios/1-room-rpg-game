@@ -39,6 +39,7 @@ life = 2;
 hit = false;
 directionOfHit = 0;
 canDoDamage = true;
+distanceChase = 0;
 
 chaseObject = noone;
 

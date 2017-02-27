@@ -9,10 +9,10 @@ if(instance_exists(chaseObject))
 
     if(
         not(
-            position_meeting(bbox_right + 5, y, chaseObject)
-            or position_meeting(bbox_left - 5, y, chaseObject)
-            or position_meeting(x, bbox_bottom + 5, chaseObject)
-            or position_meeting(x, bbox_top - 5, chaseObject)
+            position_meeting(bbox_right + distanceChase, y, chaseObject)
+            or position_meeting(bbox_left - distanceChase, y, chaseObject)
+            or position_meeting(x, bbox_bottom + distanceChase, chaseObject)
+            or position_meeting(x, bbox_top - distanceChase, chaseObject)
         )
     )
     // when the player vanishes from the enemy vision

@@ -51,7 +51,7 @@ frankPartOneCountFirstWave = 0;
 frankPartTwoCountFirstWave = 0;
 frankPartOneCountSecondWave = 0;
 frankPartTwoCountSecondWave = 0;
-frankPartCountThirdWave = timeOfWave/timeBetweenMonstersWave3;
+frankPartCountThirdWave = (timeOfWave/timeBetweenMonstersWave3) - 1;
 
     
 SetFrankDropPart();
@@ -136,17 +136,17 @@ if(waveOn) {
     }
     
     with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))
-    {
-        // 60 chance of going to attack Frank and not the player
-        
+    {        
         var chance = random_range(1, 101);
         if(chance &lt;= attackFrankChance)
         {
             chaseObject = MonsterTable;
+            distanceChase = 5;
         }
         else
         {
             chaseObject = Player;
+            distanceChase = 5;
         }
     
         type = typeOfEnemy;
