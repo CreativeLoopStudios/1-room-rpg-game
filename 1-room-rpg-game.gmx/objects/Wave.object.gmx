@@ -119,7 +119,7 @@ if(waveOn) {
     var timeBetweenMonsters = 0;
     var sprite = noone;
     var typeOfEnemy = choose("sVillager1","sVillager2","sVillager1Fem","sVillager2Fem");
-    var attackFrankChance = 50;
+    var attackFrankChance = 40;
     
     if(windowObjec.image_angle == 0) {
         yAdjust += ajustCenterOfEnemy;
