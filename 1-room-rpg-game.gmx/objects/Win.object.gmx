@@ -54,10 +54,16 @@
             <string>/// drawing text
 draw_set_color(c_white);
 draw_set_font(fPause);
-var text1 = "You Lost! :(";
-draw_text(room_width / 2 - (string_width(text1) / 2), room_height / 2 - (string_height(text1) / 2), text1);
+var text1 = "You build the creature!";
+draw_text(room_width / 2 - (string_width(text1) / 2), 100, text1);
 
-var pressAnyKey = "Press any key to try again";
+var text2 = "It was your invention and now it's alive!!!";
+draw_text(room_width / 2 - (string_width(text2) / 2), 200, text2);
+
+var text3 = "Thanks for playing!";
+draw_text(room_width / 2 - (string_width(text3) / 2), 300, text3);
+
+var pressAnyKey = "Press any key to end the game.";
 draw_text(room_width / 2 - (string_width(pressAnyKey) / 2), room_height - 100, pressAnyKey);
 </string>
           </argument>
