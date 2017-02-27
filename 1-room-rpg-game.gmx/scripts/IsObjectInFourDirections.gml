@@ -2,7 +2,7 @@
 var object = argument0;
 
 var directionOfObject = floor(point_direction(x, y, object.x, object.y));
-show_debug_message(directionOfObject);
+
 if (
     // right
     (directionOfObject >= 328 or directionOfObject <= 32)

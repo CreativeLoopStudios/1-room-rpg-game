@@ -21,7 +21,6 @@ if(instance_exists(chaseObject))
         or place_meeting(x, y + 1, chaseObject)
         or place_meeting(x, y - 1, chaseObject)))*/
     {   
-        show_debug_message("chansing");
         state = PeasantChasingState;
     }
 }

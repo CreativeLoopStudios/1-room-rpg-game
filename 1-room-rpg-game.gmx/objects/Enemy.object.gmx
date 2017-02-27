@@ -68,13 +68,22 @@ lastSprite = noone;
             <kind>1</kind>
             <string>///Drop item
 
-var dropChance = 70;
-var itemtTODrop = choose(Plank,Nails,Plank,Nails,Potion);
+var dropChance = 85;
+var itemtToDrop = choose(Plank,Nails,Plank,Nails,Potion);
+var frankDrop = CheckFrankDrop();
 var chance = random_range(1,101)
 
 if(chance &lt;= dropChance)
 {
-    instance_create(x,y,itemtTODrop);
+    
+    if(frankDrop != noone)
+    {
+        instance_create(x,y,frankDrop);
+    }
+    else
+    {
+        instance_create(x,y,itemtToDrop);
+    }
 }
 
 </string>

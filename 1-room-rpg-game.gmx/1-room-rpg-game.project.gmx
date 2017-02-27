@@ -158,6 +158,9 @@
     </scripts>
     <scripts name="Frank">
       <script>scripts\AddFrankPart.gml</script>
+      <script>scripts\SetFrankDropPart.gml</script>
+      <script>scripts\SetFrankDropCount.gml</script>
+      <script>scripts\CheckFrankDrop.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">

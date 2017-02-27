@@ -37,9 +37,27 @@ alarm[0] = timeBeforeFirstWave;
 numerOfWindows = instance_number(Window);
 
 //timeBetweenMonsters
-timeBetweenMonstersWave1 = 5 * room_speed;
-timeBetweenMonstersWave2 = 3 * room_speed;
-timeBetweenMonstersWave3 = 1 * room_speed;
+timeBetweenMonstersWave1 = 8 * room_speed;
+timeBetweenMonstersWave2 = 5 * room_speed;
+timeBetweenMonstersWave3 = 3 * room_speed;
+
+frankPartOneFirstWave = noone;
+frankPartTwoFirstWave = noone;
+frankPartOneSecondWave = noone;
+frankPartTwoSecondWave = noone;
+frankPartThirdWave = FrankHead;
+
+frankPartOneCountFirstWave = 0;
+frankPartTwoCountFirstWave = 0;
+frankPartOneCountSecondWave = 0;
+frankPartTwoCountSecondWave = 0;
+frankPartCountThirdWave = timeOfWave/timeBetweenMonstersWave3;
+
+    
+SetFrankDropPart();
+SetFrankDropCount();
+
+waveCountEnemiesKilled = 0;
 
 ajustCenterOfEnemy = 32;
 //set seed
@@ -94,7 +112,7 @@ alarm[0] = timeBetweenWave;
             <kind>1</kind>
             <string>///New Monster
 if(waveOn) {
-    var windowNumber = random_range(1,numerOfWindows + 1);
+    var windowNumber = irandom_range(1,numerOfWindows + 1);
     var windowObjec = instance_find(Window,windowNumber);
     var xAdjust = 0;
     var yAdjust = 0;
@@ -185,6 +203,7 @@ if(!waveOn) {
     alarm[2] = timeOfWave;
     waveOn = true;
     waveNumber++;
+    waveCountEnemiesKilled = 0;
 }
 </string>
           </argument>
