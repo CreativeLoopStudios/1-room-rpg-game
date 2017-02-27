@@ -112,14 +112,14 @@ alarm[0] = timeBetweenWave;
             <kind>1</kind>
             <string>///New Monster
 if(waveOn) {
-    var windowNumber = irandom_range(1,numerOfWindows + 1);
+    var windowNumber = 1//irandom_range(1,numerOfWindows + 1);
     var windowObjec = instance_find(Window,windowNumber);
     var xAdjust = 0;
     var yAdjust = 0;
     var timeBetweenMonsters = 0;
     var sprite = noone;
     var typeOfEnemy = choose("sVillager1","sVillager2","sVillager1Fem","sVillager2Fem");
-    var attackFrankChance = 40;
+    var attackFrankChance = 100;
     
     if(windowObjec.image_angle == 0) {
         yAdjust += ajustCenterOfEnemy;
@@ -136,17 +136,17 @@ if(waveOn) {
     }
     
     with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))
-    {
-        // 60 chance of going to attack Frank and not the player
-        
+    {        
         var chance = random_range(1, 101);
         if(chance &lt;= attackFrankChance)
         {
             chaseObject = MonsterTable;
+            distanceChase = 5;
         }
         else
         {
             chaseObject = Player;
+            distanceChase = 5;
         }
     
         type = typeOfEnemy;
