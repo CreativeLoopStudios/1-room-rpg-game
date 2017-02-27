@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>/// init variables
 
-lifes = 7;
+maxLifes = 7;
+lifes = maxLifes;
 
 xDraw = room_width - 32;
 yDraw = 16;

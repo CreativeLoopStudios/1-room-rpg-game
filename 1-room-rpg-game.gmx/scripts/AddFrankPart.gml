@@ -2,7 +2,7 @@
 
 var frankPart = argument0;
 
-var plankAdded = false;
+var frankPartAdded = false;
 var xPosition = 0;
 var yPosition = 0;
 
@@ -10,7 +10,7 @@ switch(frankPart.object_index)
 {
     case FrankHead:
         hasHead = true;
-        plankAdded = true;
+        frankPartAdded = true;
         with(frankPart) 
         {
             yPosition = FrankBody.y;
@@ -20,7 +20,7 @@ switch(frankPart.object_index)
         break;
     case FrankLeftLeg:
         hasLeftLeg = true;
-        plankAdded = true;
+        frankPartAdded = true;
         with(frankPart) 
         {
             yPosition = FrankBody.y + 10;
@@ -30,7 +30,7 @@ switch(frankPart.object_index)
         break;
     case FrankRightLeg:
         hasRightLeg = true;
-        plankAdded = true;
+        frankPartAdded = true;
         with(frankPart) 
         {
             yPosition = FrankBody.y - 12;
@@ -40,7 +40,7 @@ switch(frankPart.object_index)
         break;
     case FrankRightArm:
         hasRithtArm = true;
-        plankAdded = true;
+        frankPartAdded = true;
         with(frankPart) 
         {
             yPosition = FrankBody.y - 32;
@@ -50,7 +50,7 @@ switch(frankPart.object_index)
         break;
     case FrankLeftArm:
         hasLeftArm = true;
-        plankAdded = true;
+        frankPartAdded = true;
         with(frankPart) 
         {
             yPosition = FrankBody.y + 30;
@@ -60,7 +60,12 @@ switch(frankPart.object_index)
         break;
 }
 
-if(plankAdded) {
+if(frankPartAdded) {
+    with(FrankLifeGUI)
+    {
+        lifes = maxLifes;
+    }
+    
     with(frankPart) 
     {
         y = yPosition;
@@ -69,4 +74,4 @@ if(plankAdded) {
         image_angle = 270;
     }
 }
-return plankAdded;
+return frankPartAdded;
