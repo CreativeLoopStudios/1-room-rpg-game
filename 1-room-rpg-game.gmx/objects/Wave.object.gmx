@@ -114,7 +114,7 @@ if(waveOn) {
     with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))
     {
         // 60 chance of going to attack Frank and not the player
-        var attackFrankChance = 60;
+        var attackFrankChance = -1;
         var chance = random_range(1, 101);
         if(chance &lt;= attackFrankChance)
         {

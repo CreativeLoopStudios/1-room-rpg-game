@@ -13,24 +13,40 @@
         <sprite>sprites\sVillager1Left</sprite>
         <sprite>sprites\sVillager1Front</sprite>
         <sprite>sprites\sVillager1Right</sprite>
+        <sprite>sprites\sVillager1AtckBack</sprite>
+        <sprite>sprites\sVillager1AtckLeft</sprite>
+        <sprite>sprites\sVillager1AtckFront</sprite>
+        <sprite>sprites\sVillager1AtckRight</sprite>
       </sprites>
       <sprites name="Villager2">
         <sprite>sprites\sVillager2Left</sprite>
         <sprite>sprites\sVillager2Front</sprite>
         <sprite>sprites\sVillager2Right</sprite>
         <sprite>sprites\sVillager2Back</sprite>
+        <sprite>sprites\sVillager2AtckLeft</sprite>
+        <sprite>sprites\sVillager2AtckFront</sprite>
+        <sprite>sprites\sVillager2AtckRight</sprite>
+        <sprite>sprites\sVillager2AtckBack</sprite>
       </sprites>
       <sprites name="Villager1Fem">
         <sprite>sprites\sVillager1FemLeft</sprite>
         <sprite>sprites\sVillager1FemFront</sprite>
         <sprite>sprites\sVillager1FemBack</sprite>
         <sprite>sprites\sVillager1FemRight</sprite>
+        <sprite>sprites\sVillager1FemAtckLeft</sprite>
+        <sprite>sprites\sVillager1FemAtckFront</sprite>
+        <sprite>sprites\sVillager1FemAtckBack</sprite>
+        <sprite>sprites\sVillager1FemAtckRight</sprite>
       </sprites>
       <sprites name="Villager2Fem">
-        <sprite>sprites\sVillager2FemLeft</sprite>
-        <sprite>sprites\sVillager2FemFront</sprite>
         <sprite>sprites\sVillager2FemBack</sprite>
+        <sprite>sprites\sVillager2FemFront</sprite>
+        <sprite>sprites\sVillager2FemLeft</sprite>
         <sprite>sprites\sVillager2FemRight</sprite>
+        <sprite>sprites\sVillager2FemAtckBack</sprite>
+        <sprite>sprites\sVillager2FemAtckFront</sprite>
+        <sprite>sprites\sVillager2FemAtckLeft</sprite>
+        <sprite>sprites\sVillager2FemAtckRight</sprite>
       </sprites>
     </sprites>
     <sprites name="Frank">

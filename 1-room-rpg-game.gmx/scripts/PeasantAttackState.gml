@@ -5,19 +5,19 @@ if(instance_exists(chaseObject))
     
     if(directionOfPlayer >= 328 or directionOfPlayer <= 32)
     {
-        sprite_index = asset_get_index(type + "Right");;
+        sprite_index = asset_get_index(type + "AtckRight");;
     }
     else if(directionOfPlayer >= 148 and directionOfPlayer <= 212)
     {
-        sprite_index = asset_get_index(type + "Left");
+        sprite_index = asset_get_index(type + "AtckLeft");
     }
     else if(directionOfPlayer >= 58 and directionOfPlayer <= 122)
     {
-        sprite_index = asset_get_index(type + "Back");
+        sprite_index = asset_get_index(type + "AtckBack");
     }
     else if(directionOfPlayer >= 238 and directionOfPlayer <= 302)
     {
-        sprite_index = asset_get_index(type + "Front");;
+        sprite_index = asset_get_index(type + "AtckFront");;
     }
     
     // damage the player
