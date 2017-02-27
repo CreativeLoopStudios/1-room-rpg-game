@@ -17,6 +17,6 @@ if(crafting)
             break;
     }
 
-    alarm[0] = 0.25 * room_speed;
+    alarm[0] = 0.5 * room_speed;
     crafting = false;
 }
