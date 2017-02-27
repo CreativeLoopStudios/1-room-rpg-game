@@ -40,7 +40,7 @@ if(hitbox)
         var peasantHit = instance_place(x, y, Peasant);
         with(peasantHit)
         {
-            if(state == PeasantChasingPlayerState
+            if(state == PeasantChasingState
                 or state == PeasantAttackState)
             {
                 directionOfHit = playerDirection;

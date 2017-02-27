@@ -98,11 +98,11 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Enemies">
-      <script>scripts\PeasantChasingPlayerState.gml</script>
+      <script>scripts\PeasantChasingState.gml</script>
       <script>scripts\PeasantHitState.gml</script>
       <script>scripts\PeasantAttackState.gml</script>
       <script>scripts\PeasantSetSprite.gml</script>
-      <script>scripts\DoDamageToPlayer.gml</script>
+      <script>scripts\DoDamageToChaseObject.gml</script>
     </scripts>
     <scripts name="Item">
       <script>scripts\PickItemIfInRange.gml</script>

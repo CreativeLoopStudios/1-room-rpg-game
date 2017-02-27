@@ -1,7 +1,7 @@
 /// PeasantAttackState()
-if(instance_exists(Player))
+if(instance_exists(chaseObject))
 {
-    var directionOfPlayer = floor(point_direction(x, y, Player.x, Player.y));
+    var directionOfPlayer = floor(point_direction(x, y, chaseObject.x, chaseObject.y));
     
     if(directionOfPlayer >= 328 or directionOfPlayer <= 32)
     {
@@ -23,17 +23,16 @@ if(instance_exists(Player))
     // damage the player
     if(not(canDoDamage))
     {
-        DoDamageToPlayer();
-        alarm[0] = 2 * room_speed;
+        alarm[0] = 1 * room_speed;
         canDoDamage = true;
     }
 
     // when the player vanishes from the enemy vision
-    if(not(place_meeting(x + 1, y, Player)
-        or place_meeting(x - 1, y, Player)
-        or place_meeting(x, y + 1, Player)
-        or place_meeting(x, y - 1, Player)))
+    if(not(place_meeting(x + 1, y, chaseObject)
+        or place_meeting(x - 1, y, chaseObject)
+        or place_meeting(x, y + 1, chaseObject)
+        or place_meeting(x, y - 1, chaseObject)))
     {   
-        state = PeasantChasingPlayerState;
+        state = PeasantChasingState;
     }
 }

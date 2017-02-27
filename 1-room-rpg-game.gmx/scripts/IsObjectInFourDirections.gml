@@ -1,17 +1,17 @@
 /// IsObjectInFourDirections(object)
 var object = argument0;
 
-var directionOfPlayer = floor(point_direction(x, y, object.x, object.y));
-
+var directionOfObject = floor(point_direction(x, y, object.x, object.y));
+show_debug_message(directionOfObject);
 if (
     // right
-    (directionOfPlayer >= 328 or directionOfPlayer <= 32)
+    (directionOfObject >= 328 or directionOfObject <= 32)
     // left
-    or (directionOfPlayer >= 148 and directionOfPlayer <= 212)
+    or (directionOfObject >= 148 and directionOfObject <= 212)
     // back
-    or (directionOfPlayer >= 58 and directionOfPlayer <= 122)
+    or (directionOfObject >= 58 and directionOfObject <= 122)
     // front
-    or (directionOfPlayer >= 238 and directionOfPlayer <= 302)
+    or (directionOfObject >= 238 and directionOfObject <= 302)
 )
 {
     return true;

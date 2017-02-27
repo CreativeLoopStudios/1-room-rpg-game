@@ -25,5 +25,5 @@ if(hit)
 if(slideSpd <= 0)
 {
     hit = false;
-    state = PeasantChasingPlayerState;
+    state = PeasantChasingState;
 }

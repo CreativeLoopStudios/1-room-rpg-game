@@ -40,7 +40,9 @@ hit = false;
 directionOfHit = 0;
 canDoDamage = false;
 
-state = PeasantChasingPlayerState;
+chaseObject = noone;
+
+state = PeasantChasingState;
 </string>
           </argument>
         </arguments>
@@ -66,8 +68,7 @@ state = PeasantChasingPlayerState;
             <string>/// doing damage to the player
 if(state == PeasantAttackState and canDoDamage)
 {
-    DoDamageToPlayer();
-    
+    DoDamageToChaseObject();
     canDoDamage = false;
 }
 </string>
