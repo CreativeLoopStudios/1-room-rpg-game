@@ -112,7 +112,7 @@ alarm[0] = timeBetweenWave;
             <kind>1</kind>
             <string>///New Monster
 if(waveOn) {
-    var windowNumber = irandom_range(1,numerOfWindows + 1);
+    var windowNumber = irandom_range(0,numerOfWindows + 1);
     var windowObjec = instance_find(Window,windowNumber);
     var xAdjust = 0;
     var yAdjust = 0;
