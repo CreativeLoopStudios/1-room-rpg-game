@@ -148,7 +148,6 @@
       <script>scripts\IsInRange.gml</script>
       <script>scripts\DirectionMoveBounce.gml</script>
       <script>scripts\IsObjectInFourDirections.gml</script>
-      <script>scripts\GameEnds.gml</script>
       <script>scripts\CreatePauseSurface.gml</script>
       <script>scripts\ReleasePauseSurface.gml</script>
       <script>scripts\FadeToRoom.gml</script>

@@ -57,7 +57,7 @@ yDraw = 16;
             <string>/// game ends
 if(lifes &lt;= 0)
 {
-    GameEnds();
+    FadeToRoom(rLost);
 }
 </string>
           </argument>
