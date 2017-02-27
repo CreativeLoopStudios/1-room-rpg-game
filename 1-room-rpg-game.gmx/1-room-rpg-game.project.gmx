@@ -226,6 +226,7 @@
       <object>objects\Fade</object>
       <object>objects\Intro</object>
       <object>objects\Lost</object>
+      <object>objects\Win</object>
     </objects>
     <objects name="Wave">
       <object>objects\Wave</object>
@@ -244,6 +245,7 @@
     <room>rooms\rIntro</room>
     <room>rooms\rOneRoom</room>
     <room>rooms\rLost</room>
+    <room>rooms\rWin</room>
   </rooms>
   <constants number="7">
     <constant name="MAX_PLANKS">3</constant>

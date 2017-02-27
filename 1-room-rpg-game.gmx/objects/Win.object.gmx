@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>if(keyboard_check_pressed(vk_anykey))
 {
-    FadeToRoom(rOneRoom);
+    game_end();
 }
 </string>
           </argument>
@@ -54,12 +54,10 @@
             <string>/// drawing text
 draw_set_color(c_white);
 draw_set_font(fPause);
-var text1 = "You are the scientist that needs to protect his creature";
+var text1 = "You Lost! :(";
 draw_text(room_width / 2 - (string_width(text1) / 2), room_height / 2 - (string_height(text1) / 2), text1);
-var text2 = "Use E to get items and the numbers keys to drop items";
-draw_text(room_width / 2 - (string_width(text2) / 2), room_height / 2 + ((string_height(text2) / 2) * 2), text2);
 
-var pressAnyKey = "Press any key to continue";
+var pressAnyKey = "Press any key to try again";
 draw_text(room_width / 2 - (string_width(pressAnyKey) / 2), room_height - 100, pressAnyKey);
 </string>
           </argument>
