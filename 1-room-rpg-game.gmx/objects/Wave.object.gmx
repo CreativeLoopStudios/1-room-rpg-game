@@ -112,14 +112,14 @@ alarm[0] = timeBetweenWave;
             <kind>1</kind>
             <string>///New Monster
 if(waveOn) {
-    var windowNumber = 1//irandom_range(1,numerOfWindows + 1);
+    var windowNumber = irandom_range(1,numerOfWindows + 1);
     var windowObjec = instance_find(Window,windowNumber);
     var xAdjust = 0;
     var yAdjust = 0;
     var timeBetweenMonsters = 0;
     var sprite = noone;
     var typeOfEnemy = choose("sVillager1","sVillager2","sVillager1Fem","sVillager2Fem");
-    var attackFrankChance = 100;
+    var attackFrankChance = 40;
     
     if(windowObjec.image_angle == 0) {
         yAdjust += ajustCenterOfEnemy;
