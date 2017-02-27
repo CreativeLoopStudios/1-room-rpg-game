@@ -8,6 +8,7 @@
     <sound>sound\sndGetItem</sound>
     <sound>sound\sndHit</sound>
     <sound>sound\sndHitOnPlayer</sound>
+    <sound>sound\sndWindowBuild</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Enemies">

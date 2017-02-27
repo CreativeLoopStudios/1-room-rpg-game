@@ -10,7 +10,11 @@ if(leftHandItem != noone && leftHandItem.object_index == PlankWithNails)
         with(inRange) {
             plankAdded = AddPlank();
         }
-        if(plankAdded) DestroyItemInHand(0);
+        if(plankAdded)
+        {
+            DestroyItemInHand(0);
+            audio_play_sound(sndWindowBuild, 1, false);
+        }
     }
 }
 return plankAdded;
