@@ -96,6 +96,7 @@ if(waveOn) {
     var timeBetweenMonsters = 0;
     var sprite = noone;
     var typeOfEnemy = choose("sVillager1","sVillager2","sVillager1Fem","sVillager2Fem");
+    var attackFrankChance = 50;
     
     if(windowObjec.image_angle == 0) {
         yAdjust += ajustCenterOfEnemy;
@@ -114,7 +115,7 @@ if(waveOn) {
     with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))
     {
         // 60 chance of going to attack Frank and not the player
-        var attackFrankChance = -1;
+        
         var chance = random_range(1, 101);
         if(chance &lt;= attackFrankChance)
         {

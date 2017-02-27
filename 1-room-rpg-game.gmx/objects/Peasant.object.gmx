@@ -38,7 +38,7 @@ life = 2;
 
 hit = false;
 directionOfHit = 0;
-canDoDamage = false;
+canDoDamage = true;
 
 chaseObject = noone;
 
@@ -66,10 +66,10 @@ state = PeasantChasingState;
           <argument>
             <kind>1</kind>
             <string>/// doing damage to the player
-if(state == PeasantAttackState and canDoDamage)
+//if(state == PeasantAttackState)
 {
-    DoDamageToChaseObject();
-    canDoDamage = false;
+    //DoDamageToChaseObject();
+    canDoDamage = true;
 }
 </string>
           </argument>

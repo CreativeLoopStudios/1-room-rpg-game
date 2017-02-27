@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>/// init variables
 global.debug = true;
-
-randomize();
 </string>
           </argument>
         </arguments>

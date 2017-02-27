@@ -42,7 +42,8 @@ type = noone;
 
 // animation speed
 animSpd = .1;
-
+animAtckSpd = .06
+lastSprite = noone;
 </string>
           </argument>
         </arguments>

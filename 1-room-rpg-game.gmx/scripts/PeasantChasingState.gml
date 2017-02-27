@@ -11,6 +11,10 @@ if(instance_exists(chaseObject) && canEnter)
         and IsObjectInFourDirections(chaseObject))
     {
         show_debug_message("atck");
+        if(canDoDamage) {
+            DoDamageToChaseObject();
+            
+        }
         state = PeasantAttackState;
     }
 }
