@@ -199,6 +199,8 @@
       <object>objects\Solid</object>
       <object>objects\Highlight</object>
       <object>objects\Pause</object>
+      <object>objects\Fade</object>
+      <object>objects\Intro</object>
     </objects>
     <objects name="Wave">
       <object>objects\Wave</object>
@@ -214,6 +216,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rIntro</room>
     <room>rooms\rOneRoom</room>
   </rooms>
   <constants number="7">
