@@ -25,13 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init variables
-
-initLife = 5;
-lifes = 5;
-
-xDraw = 32;
-yDraw = 16;
+            <string>/// alarm to go to next room
+alarm[0] = 5 * room_speed;
 </string>
           </argument>
         </arguments>
@@ -54,17 +49,16 @@ yDraw = 16;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// when the lives of the player goes to 0
-if(lifes &lt;= 0)
+            <string>if(keyboard_check_pressed(vk_anykey))
 {
-    FadeToRoom(rLost);
+    FadeToRoom(rOneRoom);
 }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -81,21 +75,14 @@ if(lifes &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw life
-draw_sprite(sLifeGUI, 0, xDraw, yDraw);
+            <string>/// drawing text
+draw_set_color(c_white);
+draw_set_font(fPause);
+var text1 = "You Lost! :(";
+draw_text(room_width / 2 - (string_width(text1) / 2), room_height / 2 - (string_height(text1) / 2), text1);
 
-xDraw += 74;
-yDraw += 16;
-
-for(var i = 0; i &lt; lifes; i++)
-{
-    draw_sprite(sHearth, 0, xDraw, yDraw);
-    
-    xDraw += sprite_get_width(sHearth) + 1;
-}
-
-xDraw = 32;
-yDraw = 16;
+var pressAnyKey = "Press any key to try again";
+draw_text(room_width / 2 - (string_width(pressAnyKey) / 2), room_height - 100, pressAnyKey);
 </string>
           </argument>
         </arguments>

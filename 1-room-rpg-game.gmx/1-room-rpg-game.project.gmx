@@ -151,6 +151,7 @@
       <script>scripts\GameEnds.gml</script>
       <script>scripts\CreatePauseSurface.gml</script>
       <script>scripts\ReleasePauseSurface.gml</script>
+      <script>scripts\FadeToRoom.gml</script>
     </scripts>
     <scripts name="Room">
       <script>scripts\AddPlank.gml</script>
@@ -220,6 +221,7 @@
       <object>objects\Pause</object>
       <object>objects\Fade</object>
       <object>objects\Intro</object>
+      <object>objects\Lost</object>
     </objects>
     <objects name="Wave">
       <object>objects\Wave</object>
@@ -237,6 +239,7 @@
   <rooms name="rooms">
     <room>rooms\rIntro</room>
     <room>rooms\rOneRoom</room>
+    <room>rooms\rLost</room>
   </rooms>
   <constants number="7">
     <constant name="MAX_PLANKS">3</constant>
