@@ -28,13 +28,18 @@
             <string>///Create Variables
 
 waveNumber = 0
-timeBeforeFirstWave = 2 * room_speed; //1 sec delay for first char
+timeBeforeFirstWave = 5 * room_speed; //1 sec delay for first char
 timeBetweenWave = 20 * room_speed;
 timeOfWave = 120 * room_speed;
 
 waveOn = false;
 alarm[0] = timeBeforeFirstWave;
 numerOfWindows = instance_number(Window);
+
+//timeBetweenMonsters
+timeBetweenMonstersWave1 = 5 * room_speed;
+timeBetweenMonstersWave2 = 3 * room_speed;
+timeBetweenMonstersWave3 = 1 * room_speed;
 
 ajustCenterOfEnemy = 32;
 //set seed

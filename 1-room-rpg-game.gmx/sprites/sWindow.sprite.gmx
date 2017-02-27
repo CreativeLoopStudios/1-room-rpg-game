@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>104</width>
+  <width>102</width>
   <height>181</height>
   <frames>
     <frame index="0">images\sWindow_0.png</frame>

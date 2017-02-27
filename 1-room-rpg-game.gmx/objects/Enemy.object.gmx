@@ -68,7 +68,7 @@ lastSprite = noone;
             <kind>1</kind>
             <string>///Drop item
 
-var dropChance = 60;
+var dropChance = 70;
 var itemtTODrop = choose(Plank,Nails,Plank,Nails,Potion);
 var chance = random_range(1,101)
 

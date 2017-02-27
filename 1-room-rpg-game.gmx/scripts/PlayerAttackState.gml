@@ -47,6 +47,7 @@ if(hitbox)
                 life -= weaponDamage;
                 hit = true;
                 state = PeasantHitState;
+                chaseObject = Player;
             }
         }
     }
