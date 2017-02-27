@@ -7,8 +7,6 @@ if(numberOfPlanksShow < MAX_PLANKS)
     numberOfPlanksShow++;
     numberOfPlanks = numberOfPlanksShow;
     numberOfHits = 0;
-    
-    show_debug_message("numberOfPlanksShow:" + string(numberOfPlanksShow));
 }
 
 return plankAdded;

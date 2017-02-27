@@ -11,9 +11,6 @@ if(numberOfPlanksShow >= 0) {
         numberOfPlanksShow--;
     }
     
-    show_debug_message("numberOfPlanksShow:" + string(numberOfPlanksShow));
-    show_debug_message("numberOfPlanks:" + string(numberOfPlanks));
-    
     originalX = x;
     originalY = y;
     isShaking = true;

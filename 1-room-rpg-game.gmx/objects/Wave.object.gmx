@@ -51,7 +51,7 @@ frankPartOneCountFirstWave = 0;
 frankPartTwoCountFirstWave = 0;
 frankPartOneCountSecondWave = 0;
 frankPartTwoCountSecondWave = 0;
-frankPartCountThirdWave = timeOfWave/timeBetweenMonstersWave3;
+frankPartCountThirdWave = (timeOfWave/timeBetweenMonstersWave3) - 1;
 
     
 SetFrankDropPart();
