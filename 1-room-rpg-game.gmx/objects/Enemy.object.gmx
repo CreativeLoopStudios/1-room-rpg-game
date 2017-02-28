@@ -77,7 +77,7 @@ if(frankDrop != noone)
 {
     instance_create(x,y,frankDrop);
 }
-else
+else if(chance &lt;= dropChance)
 {
     instance_create(x,y,itemtToDrop);
 }
