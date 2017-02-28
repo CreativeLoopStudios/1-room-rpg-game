@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// init variables
-global.debug = true;
+global.debug = false;
 </string>
           </argument>
         </arguments>
