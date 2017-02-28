@@ -39,7 +39,7 @@ switch(frankPart.object_index)
         }
         break;
     case FrankRightArm:
-        hasRithtArm = true;
+        hasRightArm = true;
         frankPartAdded = true;
         with(frankPart) 
         {
@@ -66,12 +66,20 @@ if(frankPartAdded) {
         lifes = maxLifes;
     }
     
-    with(frankPart) 
+    with(frankPart)
     {
         y = yPosition;
         x = xPosition;
         visible = true;
         image_angle = 270;
+    }
+    
+    with(FrankBody)
+    {
+        if(hasHead && hasLeftArm && hasLeftLeg && hasRightArm && hasRightLeg)
+        {
+            FadeToRoom(rWin);
+        }
     }
 }
 return frankPartAdded;

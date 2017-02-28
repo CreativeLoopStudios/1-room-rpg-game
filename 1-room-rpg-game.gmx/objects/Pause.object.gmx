@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -54,11 +54,13 @@ if(keyboard_check_pressed(vk_escape) || keyboard_check_pressed(ord('P')))
     if(!paused)
     {
         CreatePauseSurface();
+        audio_pause_sound(sndMainMusic);
         paused = true;
     }
     else if(paused)
     {
         ReleasePauseSurface();
+        audio_resume_sound(sndMainMusic);
         paused = false;
     }
 }
@@ -86,6 +88,7 @@ if(keyboard_check_pressed(vk_escape) || keyboard_check_pressed(ord('P')))
 if(not(window_has_focus()) &amp;&amp; not(paused))
 {
     CreatePauseSurface();
+    audio_pause_sound(sndMainMusic);
     paused = true;
 }
 </string>

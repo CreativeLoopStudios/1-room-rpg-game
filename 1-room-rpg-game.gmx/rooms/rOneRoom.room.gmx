@@ -71,20 +71,26 @@
     <instance objName="Solid" x="714" y="358" name="inst_C418E496" locked="0" code="" scaleX="0.75" scaleY="3.20000004768372" colour="4294967295" rotation="0"/>
     <instance objName="FrankBody" x="615" y="346" name="inst_647FA941" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="Potion" x="424" y="416" name="inst_F7280F82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Plank" x="160" y="416" name="inst_ED78DDA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Plank" x="160" y="288" name="inst_51EE743D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Plank" x="320" y="160" name="inst_44DA79AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Plank" x="152" y="424" name="inst_ED78DDA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Plank" x="152" y="280" name="inst_51EE743D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Plank" x="328" y="168" name="inst_44DA79AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Plank" x="640" y="160" name="inst_3331912D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Plank" x="608" y="520" name="inst_6B43CDE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Plank" x="424" y="520" name="inst_88B4E33A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Plank" x="296" y="528" name="inst_48FED7E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Nails" x="144" y="376" name="inst_A8E5C93D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Nails" x="160" y="312" name="inst_D0EFD069" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Nails" x="344" y="168" name="inst_AEAF8C17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Plank" x="560" y="536" name="inst_6B43CDE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Plank" x="424" y="544" name="inst_88B4E33A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Plank" x="296" y="544" name="inst_48FED7E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Nails" x="152" y="376" name="inst_A8E5C93D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Nails" x="152" y="328" name="inst_D0EFD069" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Nails" x="368" y="168" name="inst_AEAF8C17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Nails" x="600" y="160" name="inst_17218D85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Nails" x="616" y="472" name="inst_C3FA66F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Nails" x="608" y="536" name="inst_C3FA66F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Nails" x="384" y="544" name="inst_D413EDB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Nails" x="312" y="488" name="inst_F6D033FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Nails" x="344" y="544" name="inst_F6D033FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="PlankWithNails" x="351" y="208" name="inst_679790ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="PlankWithNails" x="624" y="200" name="inst_7164ED7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="PlankWithNails" x="208" y="304" name="inst_2356EF51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="PlankWithNails" x="208" y="392" name="inst_D8BBE3B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="PlankWithNails" x="328" y="504" name="inst_CA11F068" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="PlankWithNails" x="584" y="496" name="inst_EA8B262B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

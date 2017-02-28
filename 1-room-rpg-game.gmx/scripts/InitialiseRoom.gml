@@ -6,3 +6,5 @@ instance_create(0, 0, Inventory);
 instance_create(0, 0, GUI);
 instance_create(0, 0, PlayerLifeGUI);
 instance_create(0, 0, FrankLifeGUI);
+
+audio_play_sound(sndMainMusic, 1, true);

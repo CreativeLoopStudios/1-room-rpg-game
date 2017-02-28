@@ -9,6 +9,7 @@
     <sound>sound\sndHit</sound>
     <sound>sound\sndHitOnPlayer</sound>
     <sound>sound\sndWindowBuild</sound>
+    <sound>sound\sndWindowHit</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Enemies">
@@ -61,6 +62,7 @@
       <sprite>sprites\sFrankRightArm</sprite>
       <sprite>sprites\sFrankLeftLeg</sprite>
       <sprite>sprites\sFrankRightLeg</sprite>
+      <sprite>sprites\sFrank</sprite>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\sCraftingGUI</sprite>

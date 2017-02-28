@@ -52,12 +52,21 @@
           <argument>
             <kind>1</kind>
             <string>/// drawing text
+var text1 = "You and your creature did not conquer the people's simpathy.";
+var text2 = "And were destroyed.";
+var text3 = "Try again. The Creature still needs you.";
+
+var pressAnyKey = "Press any key to restart";
+
 draw_set_color(c_white);
 draw_set_font(fPause);
-var text1 = "You Lost! :(";
-draw_text(room_width / 2 - (string_width(text1) / 2), room_height / 2 - (string_height(text1) / 2), text1);
 
-var pressAnyKey = "Press any key to try again";
+draw_text(room_width / 2 - (string_width(text1) / 2), 200, text1);
+
+draw_text(room_width / 2 - (string_width(text2) / 2), 250, text2);
+
+draw_text(room_width / 2 - (string_width(text3) / 2), 300, text3);
+
 draw_text(room_width / 2 - (string_width(pressAnyKey) / 2), room_height - 100, pressAnyKey);
 </string>
           </argument>

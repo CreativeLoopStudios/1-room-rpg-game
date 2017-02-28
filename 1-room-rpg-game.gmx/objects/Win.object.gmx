@@ -52,18 +52,24 @@
           <argument>
             <kind>1</kind>
             <string>/// drawing text
+draw_sprite(sFrank, 0, room_width / 2 - (sprite_get_width(sFrank) / 2), 30);
+
+
 draw_set_color(c_white);
 draw_set_font(fPause);
-var text1 = "You build the creature!";
-draw_text(room_width / 2 - (string_width(text1) / 2), 100, text1);
+var text1 = "You built the creature!";
+draw_text(room_width / 2 - (string_width(text1) / 2), sprite_get_height(sFrank) + 50, text1);
 
-var text2 = "It was your invention and now it's alive!!!";
-draw_text(room_width / 2 - (string_width(text2) / 2), 200, text2);
+var text2 = "And now it's aliiiiiveeeee!";
+draw_text(room_width / 2 - (string_width(text2) / 2), 300, text2);
 
-var text3 = "Thanks for playing!";
-draw_text(room_width / 2 - (string_width(text3) / 2), 300, text3);
+var text3 = "Congratulations and thanks for playing!";
+draw_text(room_width / 2 - (string_width(text3) / 2), 350, text3);
 
-var pressAnyKey = "Press any key to end the game.";
+var text4 = "Follow us on facebook  creativeloopstudios";
+draw_text(room_width / 2 - (string_width(text4) / 2), 400, text4);
+
+var pressAnyKey = "Press any key to end the game";
 draw_text(room_width / 2 - (string_width(pressAnyKey) / 2), room_height - 100, pressAnyKey);
 </string>
           </argument>

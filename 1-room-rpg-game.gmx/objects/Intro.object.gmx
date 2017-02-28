@@ -45,25 +45,32 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
             <string>/// drawing text
-var text1 = "You are the scientist that needs to protect his creature";
-var text2 = "Use E to get items and the numbers keys to drop items";
+var text1 = "You are the Scientist that needs to protect his Creature.";
+var text2 = "Your objective is defend yourself from Peasants";
+var text3 = "And built the Creature with their body parts.";
+var text4 = "Controls";
+var text5 = "Get your weapon and use the Space key to attack.";
+var text6 = "Craft some wood parts with C key to barricade the windows.";
+var text7 = "Use E to get items and the Number keys to drop them.";
 var pressAnyKey = "Press any key to continue";
 
 draw_set_color(c_white);
 draw_set_font(fPause);
 
-draw_text(room_width / 2 - (string_width(text1) / 2), room_height / 2 - string_height(text1) * 1.5 , text1);
-
-draw_text(room_width / 2 - (string_width(text2) / 2), room_height / 2 , text2);
-
-
+draw_text(room_width / 2 - (string_width(text1) / 2), 100, text1);
+draw_text(room_width / 2 - (string_width(text2) / 2), 150, text2);
+draw_text(room_width / 2 - (string_width(text3) / 2), 200, text3);
+draw_text(room_width / 2 - (string_width(text4) / 2), 400, text4);
+draw_text(room_width / 2 - (string_width(text5) / 2), 450, text5);
+draw_text(room_width / 2 - (string_width(text6) / 2), 500, text6);
+draw_text(room_width / 2 - (string_width(text7) / 2), 550, text7);
 draw_text(room_width / 2 - (string_width(pressAnyKey) / 2), room_height - 100, pressAnyKey);
 </string>
           </argument>

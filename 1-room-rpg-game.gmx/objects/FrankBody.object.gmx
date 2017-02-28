@@ -31,7 +31,7 @@ depth = -1
 hasHead = false;
 hasLeftArm = false;
 hasLeftLeg = false;
-hasRithtArm = false;
+hasRightArm = false;
 hasRightLeg = false;
 
 </string>

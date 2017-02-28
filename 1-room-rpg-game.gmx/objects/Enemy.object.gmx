@@ -73,14 +73,13 @@ var itemtToDrop = choose(Plank,Nails,Plank,Nails,Potion);
 var frankDrop = CheckFrankDrop();
 var chance = random_range(1,101)
 
-
 if(frankDrop != noone)
 {
-    instance_create(x,y,frankDrop);
+	instance_create(x,y,frankDrop);
 }
-else if(chance &lt;= dropChance)
+else
 {
-    instance_create(x,y,itemtToDrop);
+	instance_create(x,y,itemtToDrop);
 }
 
 </string>

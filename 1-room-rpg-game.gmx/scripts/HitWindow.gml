@@ -11,6 +11,8 @@ if(numberOfPlanksShow >= 0) {
         numberOfPlanksShow--;
     }
     
+    audio_play_sound(sndWindowHit, 1, false);
+    
     originalX = x;
     originalY = y;
     isShaking = true;
