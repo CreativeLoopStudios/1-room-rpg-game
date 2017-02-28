@@ -37,9 +37,9 @@ alarm[0] = timeBeforeFirstWave;
 numerOfWindows = instance_number(Window);
 
 //timeBetweenMonsters
-timeBetweenMonstersWave1 = 8 * room_speed;
-timeBetweenMonstersWave2 = 5 * room_speed;
-timeBetweenMonstersWave3 = 3 * room_speed;
+timeBetweenMonstersWave1 = 10 * room_speed;
+timeBetweenMonstersWave2 = 8 * room_speed;
+timeBetweenMonstersWave3 = 5 * room_speed;
 
 frankPartOneFirstWave = noone;
 frankPartTwoFirstWave = noone;
@@ -84,10 +84,71 @@ randomize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///End of wave
-waveOn = false;
-alarm[0] = timeBetweenWave;
-
+            <string>///New Monster
+if(waveOn) {
+    var windowNumber = irandom_range(0,numerOfWindows + 1);
+    var windowObjec = instance_find(Window,windowNumber);
+    var xAdjust = 0;
+    var yAdjust = 0;
+    var timeBetweenMonsters = 0;
+    var sprite = noone;
+    var typeOfEnemy = choose("sVillager1","sVillager2","sVillager1Fem","sVillager2Fem");
+    var attackFrankChance = 100;
+    
+    if(windowObjec.image_angle == 0) {
+        yAdjust += ajustCenterOfEnemy;
+        sprite = asset_get_index(typeOfEnemy + "Front");
+    } else if (windowObjec.image_angle == 90) {
+        xAdjust += ajustCenterOfEnemy;
+        sprite = asset_get_index(typeOfEnemy + "Right");
+    } else if (windowObjec.image_angle == 180) {
+        yAdjust -= 1.5 * ajustCenterOfEnemy; //correction position
+        sprite = asset_get_index(typeOfEnemy + "Back");
+    } else if (windowObjec.image_angle == 270) {
+        xAdjust -= ajustCenterOfEnemy;
+        sprite = asset_get_index(typeOfEnemy + "Left");
+    }
+    
+    with(instance_create(windowObjec.x + xAdjust,windowObjec.y + yAdjust,Peasant))
+    {        
+        var chance = random_range(1, 101);
+        if(chance &lt;= attackFrankChance)
+        {
+            chaseObject = MonsterTable;
+            distanceChase = 5;
+        }
+        else
+        {
+            chaseObject = Player;
+            distanceChase = 5;
+        }
+    
+        type = typeOfEnemy;
+        sprite_index = sprite;
+        image_index = 1;
+        image_speed = 0;
+        entrance = windowObjec;
+        if(!entrance.isOpen || place_meeting(x, y, Solid)) 
+        {
+            canEnter = false;
+            visible = false;
+            spawnX = x;
+            spawnY = y;
+            x = 0;
+            y = 0;
+        } 
+        else 
+        {
+            canEnter = true;
+        }
+    }
+    
+    if(waveNumber = 1) timeBetweenMonsters = 5 * room_speed;
+    else if(waveNumber = 2) timeBetweenMonsters = 3 * room_speed;
+    else if(waveNumber = 3) timeBetweenMonsters = 1 * room_speed;
+            
+    alarm[1] =  timeBetweenMonsters;
+}
 </string>
           </argument>
         </arguments>
