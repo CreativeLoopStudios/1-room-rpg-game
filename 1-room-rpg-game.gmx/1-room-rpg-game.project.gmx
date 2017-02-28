@@ -10,6 +10,7 @@
     <sound>sound\sndHitOnPlayer</sound>
     <sound>sound\sndWindowBuild</sound>
     <sound>sound\sndWindowHit</sound>
+    <sound>sound\sndMainMusic</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Enemies">
