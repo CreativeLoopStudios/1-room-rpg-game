@@ -75,11 +75,11 @@ var chance = random_range(1,101)
 
 if(frankDrop != noone)
 {
-	instance_create(x,y,frankDrop);
+    instance_create(x,y,frankDrop);
 }
-else
+else if(chance &lt;= dropChance)
 {
-	instance_create(x,y,itemtToDrop);
+    instance_create(x,y,itemtToDrop);
 }
 
 </string>
